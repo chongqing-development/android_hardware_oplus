@@ -1,0 +1,3 @@
+allow recovery sysfs_loop:dir { read open search };
+allow recovery sysfs_loop:file { write open };
+allow recovery sysfs_dm:file write;

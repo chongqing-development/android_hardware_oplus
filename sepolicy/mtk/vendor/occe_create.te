@@ -1,0 +1,22 @@
+type occe_create, domain, mlstrustedsubject;
+type occe_create_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(occe_create)
+
+binder_use(occe_create)
+
+allow occe_create self:capability { sys_admin };
+
+allow occe_create gpu_device:chr_file { rw_file_perms map };
+
+allow occe_create proc_ged:file { r_file_perms ioctl };
+
+hal_client_domain(occe_create, hal_configstore)
+
+allow occe_create hal_graphics_mapper_hwservice:hwservice_manager find;
+
+get_prop(occe_create, hwservicemanager_prop)
+get_prop(occe_create, graphics_config_writable_prop)
+
+allow occe_create tmpfs:file create_file_perms;
+allow occe_create tmpfs:dir create_dir_perms;

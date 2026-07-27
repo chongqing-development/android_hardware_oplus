@@ -1,0 +1,12 @@
+# Display
+type hal_oplus_displaypanelfeature_hwservice, hwservice_manager_type;
+
+# NFC
+type vendor_hal_felica_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_fido_hwservice, hwservice_manager_type, protected_hwservice;
+
+# ORMS
+type vendor_hal_orms_hwservice, hwservice_manager_type, protected_hwservice;
+
+# Osense
+type vendor_hal_osense_hwservice, hwservice_manager_type, protected_hwservice;

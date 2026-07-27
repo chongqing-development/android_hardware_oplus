@@ -1,0 +1,15 @@
+init_daemon_domain(ccci_rpcd)
+
+wakelock_use(ccci_rpcd)
+
+allow ccci_rpcd ccci_device:chr_file rw_file_perms;
+allow ccci_rpcd block_device:dir search;
+allow ccci_rpcd misc2_block_device:blk_file rw_file_perms;
+allow ccci_rpcd bootdevice_block_device:blk_file rw_file_perms;
+
+allow ccci_rpcd sysfs_ccci:dir search;
+allow ccci_rpcd sysfs_ccci:file r_file_perms;
+
+allow ccci_rpcd md_block_device:blk_file r_file_perms;
+
+get_prop(ccci_rpcd, system_oplus_project_prop)

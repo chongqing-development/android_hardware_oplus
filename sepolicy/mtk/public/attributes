@@ -1,0 +1,30 @@
+# Neverallow Exempt
+attribute neverallow_exempt;
+
+# Soter
+hal_attribute(soter)
+
+# Performance
+vendor_hal_attribute(oplus_performance)
+
+# URCC
+vendor_hal_attribute(oplus_urcc)
+
+# Camera
+vendor_hal_attribute(oplus_cammidasservice)
+
+# Charging
+vendor_hal_attribute(oplus_charger)
+
+# Display
+vendor_hal_attribute(oplus_displaypanelfeature)
+
+# Fingerprint Pay
+vendor_hal_attribute(fingerprintpay)
+
+# NFC
+vendor_hal_attribute(oplus_felica)
+vendor_hal_attribute(oplus_fido)
+vendor_hal_attribute(oplus_nfc)
+vendor_hal_attribute(oplus_nfc_extns)
+vendor_hal_attribute(oplus_orms)

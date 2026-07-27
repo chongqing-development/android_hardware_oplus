@@ -1,0 +1,2 @@
+r_dir_file(system_suspend, sysfs_wakeup)
+r_dir_file(system_suspend, sysfs_extcon)

@@ -1,0 +1,2 @@
+allow thermal_core sysfs:dir search;
+allow thermal_core sysfs:file r_file_perms;

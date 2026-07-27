@@ -1,0 +1,3 @@
+hal_client_domain(mtk_hal_power, vendor_hal_oplus_urcc)
+
+binder_call(mtk_hal_power, hal_oplus_urcc_aidl)
