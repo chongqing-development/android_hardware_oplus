@@ -1,0 +1,24 @@
+# Rules for factory touching device types
+
+allow factory explorer_device:chr_file { getattr ioctl map open read write };
+allow factory explorer_vendor_file:dir { search };
+allow factory mtk_usb_offload_device:chr_file { getattr ioctl lock open read watch watch_reads };
+allow factory oplus_block_device:blk_file rw_file_perms;
+allow factory oplus_consumerir_device:chr_file rw_file_perms;
+allow factory oplus_reserve_file:dir { getattr open read search };
+allow factory oplus_reserve_system_config:dir r_dir_perms;
+allow factory oplus_reserve_system_config:file rw_file_perms;
+allow factory oplus_reserve_system_file:dir { getattr open read search };
+allow factory oplus_vibrator_proc:file rw_file_perms;
+allow factory persist_camera_file:dir create_dir_perms;
+allow factory persist_camera_file:file create_file_perms;
+allow factory persist_engineer_file:dir create_dir_perms;
+allow factory persist_engineer_file:file create_file_perms;
+allow factory proc_devinfo_file:dir { open read search };
+allow factory proc_devinfo_file:file { getattr open read };
+allow factory proc_flash_light_file:file rw_file_perms;
+allow factory proc_opluscustom_file:dir { getattr open read search };
+allow factory proc_opluscustom_file:file r_file_perms;
+allow factory sysfs_panel_serial_number:file { getattr open read setattr write };
+r_dir_file(factory, sysfs_battery_supply)
+set_prop(factory, vendor_oplus_prop)

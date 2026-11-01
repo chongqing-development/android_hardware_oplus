@@ -1,0 +1,19 @@
+# Rules for aee_aedv touching device types
+
+allow aee_aedv proc_aov_kernel:file r_file_perms;
+allow aee_aedv proc_img_daemon:file r_file_perms;
+allow aee_aedv proc_img_kernel:file r_file_perms;
+allow aee_aedv proc_img_stream:file r_file_perms;
+allow aee_aedv proc_last_bus:file r_file_perms;
+allow aee_aedv proc_mdla_mdla_memory_debug:file r_file_perms;
+allow aee_aedv proc_mmdvfs_mmdvfs_opp:file r_file_perms;
+allow aee_aedv proc_mmqos_mmqos_bw:file r_file_perms;
+allow aee_aedv proc_mtk_mali_logbuf_exception:file r_file_perms;
+allow aee_aedv proc_mtk_mali_logbuf_regular:file r_file_perms;
+allow aee_aedv procfs_cam_dbg:file r_file_perms;
+allow aee_aedv procfs_cam_exception:file r_file_perms;
+allow aee_aedv sysfs_aee_encrypt:file r_file_perms;
+allow aee_aedv sysfs_disp_plat_dbg:file r_file_perms;
+allow aee_aedv vendor_imgsys_dump_file:dir r_dir_perms;
+allow aee_aedv vendor_imgsys_dump_file:file r_file_perms;
+r_dir_file(aee_aedv, proc_apusys_rv_debug)

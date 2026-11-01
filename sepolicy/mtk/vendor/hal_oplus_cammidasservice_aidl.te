@@ -1,0 +1,11 @@
+# hal_oplus_cammidasservice_aidl - ported from the stock vendor policy
+
+type hal_oplus_cammidasservice_aidl, domain;
+hal_server_domain(hal_oplus_cammidasservice_aidl, hal_midas_aidl)
+
+type hal_oplus_cammidasservice_aidl_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_oplus_cammidasservice_aidl)
+
+allow hal_oplus_cammidasservice_aidl fwk_stats_service:service_manager { find };
+allow hal_oplus_cammidasservice_aidl servicemanager:binder { call transfer };
+allow hal_oplus_cammidasservice_aidl system_server:binder { call };

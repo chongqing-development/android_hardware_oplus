@@ -1,0 +1,4 @@
+# Rules for thermal_core touching device types
+
+allow thermal_core frs_socket:dir { add_name getattr ioctl lock open read remove_name search setattr watch watch_reads write };
+allow thermal_core frs_socket:sock_file create_file_perms;

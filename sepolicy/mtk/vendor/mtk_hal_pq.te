@@ -1,0 +1,8 @@
+# Rules for mtk_hal_pq touching device types
+
+allow mtk_hal_pq proc_devinfo_file:dir { open read search };
+allow mtk_hal_pq proc_devinfo_file:file { getattr open read };
+
+allow mtk_hal_pq oplus_project_proc:file { getattr open read };
+
+get_prop(mtk_hal_pq, mtk_display_debug_prop)

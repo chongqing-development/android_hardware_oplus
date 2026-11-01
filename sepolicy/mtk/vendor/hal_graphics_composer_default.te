@@ -1,0 +1,22 @@
+# Rules for hal_graphics_composer_default touching device types
+
+allow hal_graphics_composer_default hal_oplus_display_MixLut3D_service:service_manager { add find };
+allow hal_graphics_composer_default hal_oplus_performance_aidl:binder { call transfer };
+allow hal_graphics_composer_default hal_oplus_performance_aidl:fd { use };
+allow hal_graphics_composer_default hal_oplus_performance_aidl_service:service_manager { find };
+allow hal_graphics_composer_default oplus_display_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_graphics_composer_default oplus_hal_displaypanel_hwservice:hwservice_manager { find };
+allow hal_graphics_composer_default oplus_hal_displaypanelfeature:binder { call };
+allow hal_graphics_composer_default proc_devinfo_file:dir { open read search };
+allow hal_graphics_composer_default proc_devinfo_file:file { getattr open read };
+allow hal_graphics_composer_default sysfs_panel_serial_number:file { getattr open read setattr write };
+allow hal_graphics_composer_default vendor_display_vendor_data_file:dir create_dir_perms;
+allow hal_graphics_composer_default vendor_display_vendor_data_file:file create_file_perms;
+get_prop(hal_graphics_composer_default, vendor_mtk_hwc_dsi_switch_prop)
+get_prop(hal_graphics_composer_default, vendor_mtk_hwc_prop)
+get_prop(hal_graphics_composer_default, vendor_oplus_prop)
+
+# the composer adds and resolves the OPPO CWB hwservice
+allow hal_graphics_composer_default hal_cwb_hwservice:hwservice_manager { add find };
+
+get_prop(hal_graphics_composer_default, mtk_display_debug_prop)

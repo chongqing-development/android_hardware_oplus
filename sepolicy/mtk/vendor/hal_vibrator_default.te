@@ -1,0 +1,7 @@
+# Rules for hal_vibrator_default touching device types
+
+allow hal_vibrator_default aac_richtap_dev_device:chr_file { getattr ioctl map open read write };
+allow hal_vibrator_default oplus_block_device:blk_file { open read write };
+allow hal_vibrator_default oplus_vibrator_touch_style_proc:file { getattr open read write };
+allow hal_vibrator_default proc_devinfo_file:dir { open read search };
+allow hal_vibrator_default proc_devinfo_file:file { open read };

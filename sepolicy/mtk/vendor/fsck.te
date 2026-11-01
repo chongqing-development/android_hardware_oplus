@@ -1,0 +1,5 @@
+# Charger-mode fsck probes the power supply to decide whether it is safe to
+# check /data.  /sys/class/power_supply is relabelled to sysfs_battery_supply by
+# this policy, so the base rules for the AOSP type no longer match.
+
+r_dir_file(fsck, sysfs_battery_supply)

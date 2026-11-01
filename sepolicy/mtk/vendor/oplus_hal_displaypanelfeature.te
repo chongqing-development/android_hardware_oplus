@@ -1,0 +1,27 @@
+# oplus_hal_displaypanelfeature - ported from the stock vendor policy
+
+type oplus_hal_displaypanelfeature, domain;
+hal_server_domain(oplus_hal_displaypanelfeature, hal_displaypanelfeature)
+
+type oplus_hal_displaypanelfeature_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(oplus_hal_displaypanelfeature)
+
+allow oplus_hal_displaypanelfeature alpha_sysfs:file { getattr open read };
+allow oplus_hal_displaypanelfeature boot_status_prop:file { read };
+allow oplus_hal_displaypanelfeature dp_service:service_manager { add find };
+allow oplus_hal_displaypanelfeature hal_cwb_hwservice:hwservice_manager { find };
+allow oplus_hal_displaypanelfeature hal_oplus_display_MixLut3D_service:service_manager { find };
+allow oplus_hal_displaypanelfeature init:unix_stream_socket { connectto };
+allow oplus_hal_displaypanelfeature oplus_display_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow oplus_hal_displaypanelfeature oplus_sysfs:dir { search };
+allow oplus_hal_displaypanelfeature oplus_sysfs:file { open read write };
+allow oplus_hal_displaypanelfeature property_socket:sock_file { write };
+allow oplus_hal_displaypanelfeature servicemanager:binder { call };
+allow oplus_hal_displaypanelfeature vndbinder_device:chr_file rw_file_perms;
+allow oplus_hal_displaypanelfeature vndservicemanager:binder { call transfer };
+set_prop(oplus_hal_displaypanelfeature, vendor_mtk_hwc_prop)
+
+# the HAL registers its own (hw)service and passes it on through the HIDL base
+# type as well
+allow oplus_hal_displaypanelfeature oplus_hal_displaypanel_hwservice:hwservice_manager { add find };
+allow oplus_hal_displaypanelfeature hidl_base_hwservice:hwservice_manager { add };

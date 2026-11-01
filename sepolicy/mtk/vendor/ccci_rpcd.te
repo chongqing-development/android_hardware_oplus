@@ -1,0 +1,7 @@
+# Rules for ccci_rpcd touching device types
+
+get_prop(ccci_rpcd, vendor_oplus_radio_prop)
+
+get_prop(ccci_rpcd, oplus_project_config_prop)
+
+get_prop(ccci_rpcd, media_config_prop)

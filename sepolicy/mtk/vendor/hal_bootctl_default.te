@@ -1,0 +1,3 @@
+# Rules for hal_bootctl_default touching device types
+
+allow hal_bootctl_default oplus_block_device:blk_file { getattr ioctl open read write };

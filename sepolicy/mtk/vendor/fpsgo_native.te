@@ -1,0 +1,3 @@
+# Rules for fpsgo_native touching device types
+
+allow fpsgo_native mtk_hal_gnss:process { setsched };

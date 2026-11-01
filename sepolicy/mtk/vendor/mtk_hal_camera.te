@@ -1,0 +1,72 @@
+# Rules for mtk_hal_camera touching device types
+
+allow mtk_hal_camera commondcs_aidl_service:service_manager { find };
+allow mtk_hal_camera explorer_device:chr_file { ioctl map open read write };
+allow mtk_hal_camera explorer_vendor_file:dir create_dir_perms;
+allow mtk_hal_camera explorer_vendor_file:file create_file_perms;
+allow mtk_hal_camera fwk_osense_aidl_service:service_manager { find };
+allow mtk_hal_camera hal_explorer_hwservice:hwservice_manager { add find };
+allow mtk_hal_camera hal_midas_hwservice:hwservice_manager { find };
+allow mtk_hal_camera hal_orms_hwservice:hwservice_manager { find };
+allow mtk_hal_camera hal_osense_client_hwservice:hwservice_manager { find };
+allow mtk_hal_camera hal_sendextcamcmd_hwservice:hwservice_manager { add find };
+allow mtk_hal_camera odm_bin_crossbuild_file:file r_file_perms;
+allow mtk_hal_camera oplus_proc_cam_kern_fb:file rw_file_perms;
+allow mtk_hal_camera oplus_project_proc:file { getattr open read };
+allow mtk_hal_camera oplus_sched_assist_scene_proc:file rw_file_perms;
+allow mtk_hal_camera oplus_scheduler_sched_assist_proc:dir { read search };
+allow mtk_hal_camera oplus_scheduler_sched_assist_proc:file { getattr open read write };
+allow mtk_hal_camera persist_camera_file:dir create_dir_perms;
+allow mtk_hal_camera persist_camera_file:file create_file_perms;
+allow mtk_hal_camera proc_boost_pool:dir { search };
+allow mtk_hal_camera proc_boost_pool:file rw_file_perms;
+allow mtk_hal_camera proc_img_daemon:file w_file_perms;
+allow mtk_hal_camera proc_img_kernel:file w_file_perms;
+allow mtk_hal_camera proc_img_stream:file w_file_perms;
+allow mtk_hal_camera proc_sensor_feature:dir r_dir_perms;
+allow mtk_hal_camera proc_sensor_feature:file { getattr open read };
+allow mtk_hal_camera sysfs_gpu_fwpath:file { open read write };
+allow mtk_hal_camera vendor_imgsys_dump_file:dir create_dir_perms;
+allow mtk_hal_camera vendor_imgsys_dump_file:file create_file_perms;
+allow mtk_hal_camera vendor_mtk_hal_camera:file { getattr map open read };
+allow mtk_hal_camera vendor_mtk_hal_camera:property_service { set };
+r_dir_file(mtk_hal_camera, sysfs_battery_supply)
+set_prop(mtk_hal_camera, vendor_oplus_prop)
+
+allow mtk_hal_camera proc_version:file r_file_perms;
+
+allow mtk_hal_camera persist_data_file:dir { search };
+
+# ro.separate.soft / ro.product.hw (the OPPO project name) and the per-project
+# camera tuning switches - see private/property_contexts
+get_prop(mtk_hal_camera, oplus_project_config_prop)
+get_prop(mtk_hal_camera, oplus_camera_config_prop)
+
+get_prop(mtk_hal_camera, mtk_assert_config_prop)
+
+get_prop(mtk_hal_camera, media_config_prop)
+
+# The display-processor / HDR / DVFS switches that private/property_contexts
+# puts on mtk_display_debug_prop.  The camera HAL reads them when a session comes
+# up (libdpframework.so, libged.so), and only the display side had grants until
+# now, so every camera session logged a denied read.
+get_prop(mtk_hal_camera, mtk_display_debug_prop)
+
+# Restored from the stock-port tree (HEAD) - rules the earlier cleanup dropped,
+# adapted to the type names this policy carries: hal_oplus_osense_aidl_service
+# is now fwk_osense_aidl_service (already granted above), /proc/cam_kern_fb and
+# /proc/oplusVersion are covered by the oplus_proc_cam_kern_fb / oplus_project_proc
+# grants above, the oplus_scheduler_sched_assist_proc grants above replace the
+# old vendor_proc_oplus_scheduler form (that type no longer exists), and the
+# proc_version allow above replaces the old r_dir_file form.  vendor_oplus_camera_prop
+# is gone, so the set lands on oplus_camera_config_prop; the touch set right is
+# the vendor_oplus_prop grant.
+allow mtk_hal_camera persist_camera_file:dir rw_dir_perms;
+allow mtk_hal_camera persist_data_file:dir search;
+r_dir_file(mtk_hal_camera, sysfs_power_supply)
+
+# The old tree granted these as well; the OPPO camera prop type of this policy
+# is oplus_camera_config_prop (vendor_oplus_camera_prop no longer exists) and
+# the touch set right is the vendor_oplus_prop grant further up.
+get_prop(mtk_hal_camera, exported_system_prop)
+set_prop(mtk_hal_camera, oplus_camera_config_prop)

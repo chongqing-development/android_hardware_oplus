@@ -1,0 +1,6 @@
+# MTK's debug policy matches /(system_ext|system/system_ext)/bin/emdlogger[0-9]+
+# (device/mediatek/sepolicy_vndr/debug/private/file_contexts).  This port ships
+# a single `emdlogger` binary, so the pattern never matched: it stayed on
+# system_file and the modem logging daemon ran in init's domain instead of
+# MTK's emdlogger domain.
+/(system_ext|system/system_ext)/bin/emdlogger                     u:object_r:emdlogger_exec:s0

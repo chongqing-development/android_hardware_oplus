@@ -1,0 +1,3 @@
+# Rules for atcid touching device types
+
+r_dir_file(atcid, sysfs_battery_supply)

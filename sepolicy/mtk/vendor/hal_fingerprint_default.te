@@ -1,0 +1,18 @@
+# android.hardware.biometrics.fingerprint@2.3-service.oplus
+#
+# This is the AOSP-facing fingerprint HAL of the port; the OPPO one for the
+# under-display sensor (vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff)
+# runs as hal_fingerprint_oplus.  The 2.3 service finds and calls it over binder,
+# which is why both used to end up in the same domain and talk to themselves.
+
+binder_call(hal_fingerprint_default, hal_fingerprint_oplus)
+allow hal_fingerprint_default goodix_fingerprint_vndservice:service_manager { find };
+get_prop(hal_fingerprint_default, oplus_fingerprint_prop)
+
+# the 2.3 wrapper drives the OPPO display node for the under-display sensor
+allow hal_fingerprint_default oplus_display_device:chr_file { getattr ioctl open read write };
+
+# now that the fingerprint interfaces are labelled hal_fingerprint_hwservice
+# (vendor/hwservice_contexts) instead of default_android_hwservice, the AOSP 2.3
+# wrapper can resolve the OPPO 2.1 service through the platform rule.
+allow hal_fingerprint_default hal_fingerprint_hwservice:hwservice_manager { find };

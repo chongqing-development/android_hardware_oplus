@@ -1,0 +1,5 @@
+# misctrl reads the firmware devicetree, exactly like kcmdlinectrl (see
+# kcmdlinectrl.te): the label comes from the base genfs_contexts, the access
+# rule the other MTK coredomains have is missing.
+
+r_dir_file(misctrl, sysfs_dt_firmware_android)

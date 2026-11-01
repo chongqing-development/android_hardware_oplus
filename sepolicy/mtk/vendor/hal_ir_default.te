@@ -1,0 +1,3 @@
+# Rules for hal_ir_default touching device types
+
+allow hal_ir_default oplus_consumerir_device:chr_file rw_file_perms;

@@ -1,0 +1,31 @@
+# Properties the vendor/odm init scripts set.  Both lists mirror what the stock
+# vendor policy granted vendor_init: the types are the ones this tree already
+# declares, so only the missing set_prop() rules are added here.
+
+set_prop(vendor_init, exported_system_prop)
+set_prop(vendor_init, vendor_mtk_bt_connac3_prop)
+set_prop(vendor_init, vendor_mtk_debug_sf_duration_prop)
+set_prop(vendor_init, vendor_oplus_prop)
+set_prop(vendor_init, vendor_oplus_radio_prop)
+
+# audio tuning path, the A2DP AAC property the ODM script sets (stock-owned by
+# exported_bluetooth_prop, see private/property_contexts) and the sensor
+# brightness switch
+set_prop(vendor_init, audio_tunning_prop)
+set_prop(vendor_init, exported_bluetooth_prop)
+set_prop(vendor_init, vendor_mtk_boostfwk_prop)
+set_prop(vendor_init, vendor_oplus_sensor_prop)
+
+# the charger init script writes /proc/ui_soc_decimal; same perm set as stock
+allow vendor_init oplus_ui_soc_decimal_proc:file { create open read write };
+
+# ro.lmk.nandswap_version and persist.bluetooth.a2dp.lhdc are relabelled in
+# private/property_contexts onto types vendor_init may already set (AOSP grants
+# vendor_init set on lmkd_config_prop and exported_bluetooth_prop).
+set_prop(vendor_init, lmkd_config_prop)
+
+# the ODM scripts write two more nodes directly: /proc/sys/vm/
+# dirty_writeback_centisecs (labelled with the generic proc type) and the OPPO
+# touchpanel switches.
+allow vendor_init proc:file { open write };
+allow vendor_init proc_touchpanel_file:file { getattr open write };

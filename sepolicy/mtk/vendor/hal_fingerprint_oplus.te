@@ -1,0 +1,78 @@
+# hal_fingerprint_oplus - ported from the stock vendor policy
+
+type hal_fingerprint_oplus, domain;
+hal_server_domain(hal_fingerprint_oplus, hal_fingerprint)
+hal_client_domain(hal_fingerprint_oplus, hal_oplus_touch)
+
+type hal_fingerprint_oplus_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_fingerprint_oplus)
+
+allow hal_fingerprint_oplus chipone_finger_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprint_oplus commondcs_aidl_service:service_manager { find };
+allow hal_fingerprint_oplus egis_finger_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprint_oplus factorytestreport_vendor_data_file:dir { add_name create getattr read search write };
+allow hal_fingerprint_oplus factorytestreport_vendor_data_file:file { create open read write };
+allow hal_fingerprint_oplus fingerprint_vendor_data_file:dir { write };
+allow hal_fingerprint_oplus fingerprintd_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprint_oplus fwk_osense_aidl_service:service_manager { find };
+allow hal_fingerprint_oplus fwk_sensor_hwservice:hwservice_manager { find };
+allow hal_fingerprint_oplus goodix_fingerprint_vndservice:service_manager { add find };
+allow hal_fingerprint_oplus hal_fingerprint_hwservice:hwservice_manager { add find };
+allow hal_fingerprint_oplus hal_oplus_misc_aidl_service:service_manager { find };
+allow hal_fingerprint_oplus hal_oplus_performance_aidl:binder { call transfer };
+allow hal_fingerprint_oplus hal_oplus_performance_aidl:fd { use };
+allow hal_fingerprint_oplus hal_oplus_performance_aidl_service:service_manager { find };
+allow hal_fingerprint_oplus hal_oplus_touch_aidl_default:binder { call transfer };
+allow hal_fingerprint_oplus hal_oplus_touch_aidl_default:fd { use };
+allow hal_fingerprint_oplus hal_oplus_touch_aidl_service:service_manager { find };
+allow hal_fingerprint_oplus hal_oplus_touch_hwservice:hwservice_manager { find };
+allow hal_fingerprint_oplus hal_orms_hwservice:hwservice_manager { find };
+allow hal_fingerprint_oplus hal_osense_client_hwservice:hwservice_manager { find };
+allow hal_fingerprint_oplus hidl_base_hwservice:hwservice_manager { add };
+allow hal_fingerprint_oplus hwservicemanager:binder { call };
+allow hal_fingerprint_oplus init:file { read };
+allow hal_fingerprint_oplus init:unix_stream_socket { connectto };
+allow hal_fingerprint_oplus ion_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprint_oplus jiiov_fp_device:chr_file { getattr ioctl open read write };
+allow hal_fingerprint_oplus mnt_vendor_file:dir { search };
+allow hal_fingerprint_oplus mobicore_user_device:chr_file { ioctl open read write };
+allow hal_fingerprint_oplus oplus_fingerprint_file:dir create_dir_perms;
+allow hal_fingerprint_oplus oplus_fingerprint_file:file create_file_perms;
+allow hal_fingerprint_oplus oplus_sysfs:dir { search };
+allow hal_fingerprint_oplus oplus_sysfs:file { open read write };
+allow hal_fingerprint_oplus persist_data_file:dir { add_name create getattr open read remove_name search write };
+allow hal_fingerprint_oplus persist_data_file:file { append create getattr open read rename unlink write };
+allow hal_fingerprint_oplus proc:file rw_file_perms;
+allow hal_fingerprint_oplus proc_chip:file { getattr open read };
+allow hal_fingerprint_oplus proc_devinfo_file:dir { search };
+allow hal_fingerprint_oplus proc_devinfo_file:file { open read };
+allow hal_fingerprint_oplus proc_sysrq:file rw_file_perms;
+allow hal_fingerprint_oplus proc_touchpanel_file:dir { search };
+allow hal_fingerprint_oplus proc_touchpanel_file:file rw_file_perms;
+allow hal_fingerprint_oplus property_socket:sock_file { read write };
+allow hal_fingerprint_oplus rootfs:dir r_dir_perms;
+allow hal_fingerprint_oplus silead_fpd_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprint_oplus sysfs:file rw_file_perms;
+allow hal_fingerprint_oplus sysfs_battery_supply:dir { search };
+allow hal_fingerprint_oplus sysfs_battery_supply:file { getattr open read };
+allow hal_fingerprint_oplus sysfs_disp_hbm:file { open read write };
+allow hal_fingerprint_oplus sysfs_leds:dir { search };
+allow hal_fingerprint_oplus sysfs_leds:file { open read write };
+allow hal_fingerprint_oplus system_data_file:dir { getattr };
+allow hal_fingerprint_oplus system_server:binder { call };
+allow hal_fingerprint_oplus tee_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprint_oplus tmpfs:chr_file rw_file_perms;
+allow hal_fingerprint_oplus uhid_device:chr_file { ioctl open read write };
+allow hal_fingerprint_oplus vendor_file:file { read };
+allow hal_fingerprint_oplus vndbinder_device:chr_file rw_file_perms;
+allow hal_fingerprint_oplus vndservicemanager:binder { call transfer };
+get_prop(hal_fingerprint_oplus, hwservicemanager_prop)
+get_prop(hal_fingerprint_oplus, vendor_oplus_prop)
+get_prop(hal_fingerprint_oplus, vendor_oplus_radio_prop)
+set_prop(hal_fingerprint_oplus, oplus_fingerprint_prop)
+
+# The OPPO 2.1 service and the AOSP 2.3 wrapper call each other over binder
+# (hal_fingerprint_default.te carries the other direction).
+binder_call(hal_fingerprint_oplus, hal_fingerprint_default)
+
+get_prop(hal_fingerprint_oplus, oplus_project_config_prop)

@@ -1,0 +1,11 @@
+# Rules for hal_nfc_default touching device types
+
+allow hal_nfc_default esim_en_device:chr_file { getattr ioctl open read write };
+allow hal_nfc_default eventprocessor_hwservice:hwservice_manager { find };
+allow hal_nfc_default hal_oplus_nfc_default:binder { call transfer };
+allow hal_nfc_default nxpese_hwservice:hwservice_manager { find };
+allow hal_nfc_default nxpnfc_hwservice:hwservice_manager { add find };
+allow hal_nfc_default secure_element_vendor_data_file:dir { search };
+allow hal_nfc_default secure_element_vendor_data_file:file { create getattr open read setattr unlink write };
+allow hal_nfc_default vendor_nfc_vendor_data_file:dir { add_name getattr read remove_name search write };
+allow hal_nfc_default vendor_nfc_vendor_data_file:file { create getattr open read setattr unlink write };

@@ -1,0 +1,3 @@
+# Rules for vendor_install_recovery touching device types
+
+set_prop(vendor_install_recovery, vendor_oplus_prop)

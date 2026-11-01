@@ -1,0 +1,5 @@
+# Rules for hal_sensors_default touching device types
+
+allow hal_sensors_default ssc_interactive_device:chr_file rw_file_perms;
+set_prop(hal_sensors_default, vendor_oplus_prop)
+set_prop(hal_sensors_default, vendor_oplus_sensor_prop)

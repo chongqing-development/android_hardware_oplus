@@ -1,0 +1,4 @@
+# Rules for mediacodec touching device types
+
+allow mediacodec hal_dms_hwservice:hwservice_manager { find };
+allow mediacodec vendor_oplus_prop:property_service { set };

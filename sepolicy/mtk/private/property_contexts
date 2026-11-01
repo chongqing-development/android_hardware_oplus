@@ -1,0 +1,801 @@
+# OPPO specific system_ext properties
+
+oplus.apps_monitor_enable                                   u:object_r:exported_system_prop:s0
+oplus.aps.algo.asd.enablehdr                                u:object_r:exported_system_prop:s0
+oplus.aps.bokeh.nree.enable                                 u:object_r:exported_system_prop:s0
+oplus.aps.decision.algolist                                 u:object_r:exported_system_prop:s0
+oplus.aps.decision.evlist                                   u:object_r:exported_system_prop:s0
+oplus.aps.decision.others                                   u:object_r:exported_system_prop:s0
+oplus.aps.forcealgo                                         u:object_r:exported_system_prop:s0
+oplus.aps.forcelight                                        u:object_r:exported_system_prop:s0
+oplus.aps.forcemode                                         u:object_r:exported_system_prop:s0
+oplus.aps.hdrev0                                            u:object_r:exported_system_prop:s0
+oplus.aps.hdrev1                                            u:object_r:exported_system_prop:s0
+oplus.aps.hdrev2                                            u:object_r:exported_system_prop:s0
+oplus.aps.hdrev3                                            u:object_r:exported_system_prop:s0
+oplus.aps.hdrev4                                            u:object_r:exported_system_prop:s0
+oplus.aps.logic.bokeh.mode                                  u:object_r:exported_system_prop:s0
+oplus.camera.adjexptime.ev                                  u:object_r:exported_system_prop:s0
+oplus.camera.adjexptime.ev1                                 u:object_r:exported_system_prop:s0
+oplus.camera.adjexptime.flag                                u:object_r:exported_system_prop:s0
+oplus.camera.adjMemValue.value                              u:object_r:exported_system_prop:s0
+oplus.camera.ainrToMfllIndexLimit.value                     u:object_r:exported_system_prop:s0
+oplus.camera.aps3.pfbdump                                   u:object_r:exported_system_prop:s0
+oplus.camera.cali.dump_img                                  u:object_r:exported_system_prop:s0
+oplus.camera.pfb.platform                                   u:object_r:exported_system_prop:s0
+oplus.camera.pfdLog.enable                                  u:object_r:exported_system_prop:s0
+oplus.camera.sattele.enablegyrodata                         u:object_r:exported_system_prop:s0
+oplus.camera.softentype                                     u:object_r:exported_system_prop:s0
+oplus.camera.thermalThrottle                                u:object_r:exported_system_prop:s0
+oplus.camera.orms                                           u:object_r:exported_system_prop:s0
+oppo.camera.thermalThrottle                                 u:object_r:exported_system_prop:s0
+oplus.switch.video.beauty                                   u:object_r:exported_system_prop:s0
+oppo.switch.video.beauty                                    u:object_r:exported_system_prop:s0
+com.oplus.motor.flashlight                                  u:object_r:exported_system_prop:s0
+com.oppo.motor.flashlight                                   u:object_r:exported_system_prop:s0
+oplus.keyguard.restart.mode                                 u:object_r:exported_system_prop:s0
+oplus.camera.vd.fbenable                                    u:object_r:exported_system_prop:s0
+oplus.debug.night.ev.offset                                 u:object_r:exported_system_prop:s0
+oplus.debug.night.state                                     u:object_r:exported_system_prop:s0
+oplus.device.firstboot                                      u:object_r:exported_system_prop:s0
+oplus.dex.tempcontrol                                       u:object_r:exported_system_prop:s0
+oplus.dex.thread.number                                     u:object_r:exported_system_prop:s0
+oplus.dex.dex2oat-cpu-set                                   u:object_r:exported_system_prop:s0
+oplus.service.datafree.enable                               u:object_r:exported_system_prop:s0
+oplus.softap.band                                           u:object_r:exported_system_prop:s0
+oplus.softap6g.band                                         u:object_r:exported_system_prop:s0
+oplus.softap5g.channel.bandwidth                            u:object_r:exported_system_prop:s0
+oplus.thirdparty.cmpt.logs.appender                         u:object_r:exported_system_prop:s0
+oplus.thirdparty.cmpt.logs.formatter                        u:object_r:exported_system_prop:s0
+oplus.thirdparty.cmpt.logs.switcher                         u:object_r:exported_system_prop:s0
+oplus.vendor.camera.sethdrDebugMode                         u:object_r:exported_system_prop:s0
+oplus.vendor.camera.setremosaicDebugMode                    u:object_r:exported_system_prop:s0
+oppo.autotest.                                              u:object_r:exported_system_prop:s0
+oplus.autotest.                                             u:object_r:exported_system_prop:s0
+oppo.factory.                                               u:object_r:exported_system_prop:s0
+oplus.factory.                                              u:object_r:exported_system_prop:s0
+ro.oppo.build.exp                                           u:object_r:exported_system_prop:s0
+ro.oppo.engineering.beta.buildinfo_test                     u:object_r:exported_system_prop:s0
+ro.oppo.engineering.factory.buildinfo_test                  u:object_r:exported_system_prop:s0
+ro.oppo.market.enname                                       u:object_r:exported_system_prop:s0
+ro.oppo.market.name                                         u:object_r:exported_system_prop:s0
+ro.oppo.screen.heteromorphism                               u:object_r:exported_system_prop:s0
+ro.oppo.screenhole.positon                                  u:object_r:exported_system_prop:s0
+ro.oppo.theme.version                                       u:object_r:exported_system_prop:s0
+ro.oplus.adb.secure                                         u:object_r:exported_system_prop:s0
+ro.oplus.apollo.platform_8250                               u:object_r:exported_system_prop:s0
+ro.oplus.audio.camerasound.forced                           u:object_r:exported_system_prop:s0
+ro.oplus.audio.custom.media_vol_default                     u:object_r:exported_system_prop:s0
+ro.oplus.audio.dolby.offload                                u:object_r:exported_system_prop:s0
+ro.oplus.audio.dolby.type                                   u:object_r:exported_system_prop:s0
+ro.oplus.audio.effect.type                                  u:object_r:exported_system_prop:s0
+ro.oplus.audio.effects.offload                              u:object_r:exported_system_prop:s0
+ro.oplus.audio.low_volume_for_engineering                   u:object_r:exported_system_prop:s0
+ro.oplus.audio.notsupport.audioscence                       u:object_r:exported_system_prop:s0
+ro.oplus.audio.voip.enhancement                             u:object_r:exported_system_prop:s0
+ro.oplus.camera.video.beauty.switch                         u:object_r:exported_system_prop:s0
+ro.oplus.camera.video_beauty.prefix                         u:object_r:exported_system_prop:s0
+ro.oplus.camera.thirdcap.refactor                           u:object_r:exported_system_prop:s0
+ro.oplus.connectivity.oversea                               u:object_r:exported_system_prop:s0
+ro.oplus.connectivity.prevision_build                       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.default_brightness              u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.hbm_ys                          u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.max_brightness                  u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.min_light_in_dnm                u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_max_brightness           u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_min_brightness           u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.panel_num                       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.smooth                          u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.xs                              u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.ys                              u:object_r:exported_system_prop:s0
+ro.oplus.display.colormode.cinema                           u:object_r:exported_system_prop:s0
+ro.oplus.display.colormode.colorful                         u:object_r:exported_system_prop:s0
+ro.oplus.display.colormode.soft                             u:object_r:exported_system_prop:s0
+ro.oplus.display.colormode.soft.renderintent                u:object_r:exported_system_prop:s0
+ro.oplus.display.colormode.vivid                            u:object_r:exported_system_prop:s0
+ro.oplus.display.colormode.vivid.renderintent               u:object_r:exported_system_prop:s0
+ro.oplus.display.density.screenzoom.fdh                     u:object_r:exported_system_prop:s0
+ro.oplus.display.density.screenzoom.qdh                     u:object_r:exported_system_prop:s0
+ro.oplus.display.OSIE.special                               u:object_r:exported_system_prop:s0
+ro.oplus.display.rc.size                                    u:object_r:exported_system_prop:s0
+ro.oplus.display.screen.heteromorphism                      u:object_r:exported_system_prop:s0
+ro.oplus.display.screenhole.positon                         u:object_r:exported_system_prop:s0
+ro.oplus.display.sensortype                                 u:object_r:exported_system_prop:s0
+ro.oplus.display.support.renderIntent                       u:object_r:exported_system_prop:s0
+ro.oplus.flashlight.rio.switch                              u:object_r:exported_system_prop:s0
+ro.oplus.fusionlight                                        u:object_r:exported_system_prop:s0
+ro.oplus.gnss.del_aiding_data.switch                        u:object_r:exported_system_prop:s0
+ro.oplus.gnss.nmea_filter.switch                            u:object_r:exported_system_prop:s0
+ro.oplus.gnss.nmea_thread.switch                            u:object_r:exported_system_prop:s0
+ro.oplus.gnss.power_save.switch                             u:object_r:exported_system_prop:s0
+ro.oplus.image.my_carrier.date                              u:object_r:exported_system_prop:s0
+ro.oplus.image.my_carrier.date.utc                          u:object_r:exported_system_prop:s0
+ro.oplus.image.my_company.date                              u:object_r:exported_system_prop:s0
+ro.oplus.image.my_country.date                              u:object_r:exported_system_prop:s0
+ro.oplus.image.my_engineering.type                          u:object_r:exported_system_prop:s0
+ro.oplus.image.my_product.date                              u:object_r:exported_system_prop:s0
+ro.oplus.image.my_region.type                               u:object_r:exported_system_prop:s0
+ro.oplus.lcd.display.screen.underlightsensor.region         u:object_r:exported_system_prop:s0
+ro.oplus.nfc.gpfelica.support                               u:object_r:exported_system_prop:s0
+ro.oplus.nfc.support_japan_felica                           u:object_r:exported_system_prop:s0
+ro.oplus.oiface.gcp.extmode                                 u:object_r:exported_system_prop:s0
+ro.oplus.rsa3.support                                       u:object_r:exported_system_prop:s0
+ro.oplus.sf.primary.display.orientation                     u:object_r:exported_system_prop:s0
+ro.oplus.support_gota                                       u:object_r:exported_system_prop:s0
+ro.oplus.system.camera.flashlight                           u:object_r:exported_system_prop:s0
+ro.oplus.system.camera.name                                 u:object_r:exported_system_prop:s0
+ro.oplus.system.gallery.name                                u:object_r:exported_system_prop:s0
+persist.sys.oplus.radio.                                    u:object_r:system_oplus_radio_prop:s0
+ro.oplus.radio.                                             u:object_r:system_oplus_radio_prop:s0
+sys.oplus.radio.                                            u:object_r:system_oplus_radio_prop:s0
+persist.oplus.network.                                      u:object_r:system_oplus_radio_prop:s0
+oplus.camera.packname                                       u:object_r:exported_system_prop:s0
+oplus.camera.activityname                                   u:object_r:exported_system_prop:s0
+sys.oplus.mm.voice.record                                   u:object_r:exported_system_prop:s0
+persist.oplus.audio.spllimit.support                        u:object_r:exported_system_prop:s0
+persist.oplus.audio.spllimit.on                             u:object_r:exported_system_prop:s0
+persist.oplus.audio.spllimit.level                          u:object_r:exported_system_prop:s0
+persist.oplus.wfd.on                                        u:object_r:oplus_wfd_prop:s0
+persist.oplus.mm.log.at                                     u:object_r:exported_system_prop:s0
+persist.oplus.mm.log.af                                     u:object_r:exported_system_prop:s0
+persist.oplus.mm.log.apm                                    u:object_r:exported_system_prop:s0
+persist.oplus.mm.log.hal                                    u:object_r:exported_system_prop:s0
+persist.oplus.mm.log.tag                                    u:object_r:exported_system_prop:s0
+persist.oplus.mm.pcmdump                                    u:object_r:exported_system_prop:s0
+persist.sys.oplusdebug.tpcatcher                            u:object_r:exported_system_prop:s0
+ro.build.version.oplusrom                                   u:object_r:exported_default_prop:s0
+persist.oplus.display.resolution                            u:object_r:debug_prop:s0
+sys.oplus.wifi.dump.mode                                    u:object_r:exported_system_prop:s0
+sys.oplus.wifi.dump.enable                                  u:object_r:exported_system_prop:s0
+sys.oplus.wifi.dump.trigger                                 u:object_r:exported_system_prop:s0
+sys.oplus.wifi.dump.logcollect                              u:object_r:exported_system_prop:s0
+sys.oplus.wifi.dump.nameheader                              u:object_r:exported_system_prop:s0
+sys.oplus.wifi.dump.needupload                              u:object_r:exported_system_prop:s0
+sys.oplus.wifi.dump.failureDesc                             u:object_r:exported_system_prop:s0
+sys.oplus.wlan.sar_idx                                      u:object_r:exported_system_prop:s0
+sys.oplus.wlan.sar.forcemode                                u:object_r:exported_system_prop:s0
+sys.oplus.wifi.rus.upgrade.ctl                              u:object_r:exported_system_prop:s0
+sys.oplus.wifi.rus.objs.type                                u:object_r:exported_system_prop:s0
+sys.oplus.wifi.rus.objs.upgrade.status                      u:object_r:exported_system_prop:s0
+persist.oplus.audio.audioramp.support                       u:object_r:exported_system_prop:s0
+sys.oplus.wifi.switch.log.ctl                               u:object_r:exported_system_prop:s0
+sys.oplus.wifi.switch.log.fid                               u:object_r:exported_system_prop:s0
+sys.oplus.wifi.switch.log.reason                            u:object_r:exported_system_prop:s0
+vendor.oplus.engineer.usb.config                            u:object_r:usb_control_prop:s0
+persist.sys.oplus.usbactive                                 u:object_r:exported_system_prop:s0
+sys.oplus.wifi.connect.                                     u:object_r:system_oplus_wifi_prop:s0
+persist.sys.oplus.region                                    u:object_r:exported_system_prop:s0
+vendor.oplus.jedi.whiteList                                 u:object_r:exported_system_prop:s0
+vendor.oplus.jedi.mode                                      u:object_r:exported_system_prop:s0
+vendor.oplus.coolex.effect                                  u:object_r:exported_system_prop:s0
+vendor.oplus.coolex.effect.renderMode                       u:object_r:exported_system_prop:s0
+vendor.oplus.coolex.effect.pass                             u:object_r:exported_system_prop:s0
+vendor.oplus.coolex.gameProxy                               u:object_r:exported_system_prop:s0
+persist.vendor.oplus.update_status                          u:object_r:exported_system_prop:s0
+persist.vendor.oplus.verify_result                          u:object_r:exported_system_prop:s0
+persist.vendor.oplus.verify_progress                        u:object_r:exported_system_prop:s0
+sys.oplus.update_engine.log                                 u:object_r:exported_system_prop:s0
+oplus.sau.setup.time                                        u:object_r:exported_system_prop:s0
+oplus.sau.install.zip                                       u:object_r:exported_system_prop:s0
+oplus.vab.update.type                                       u:object_r:exported_system_prop:s0
+oplus.vab.update.dialog                                     u:object_r:exported_system_prop:s0
+oplus.vab.update.dialog.reboot                              u:object_r:exported_system_prop:s0
+oplus.ota.autoinstall.time                                  u:object_r:exported_system_prop:s0
+oplus.sau.hephaestus                                        u:object_r:exported_system_prop:s0
+oplus.sau.hephaestus_install                                u:object_r:exported_system_prop:s0
+oplus.sau.vndhephaestus                                     u:object_r:exported_system_prop:s0
+oplus.sau.install.reboot                                    u:object_r:exported_system_prop:s0
+oplus.opex.hotupdate                                        u:object_r:exported_system_prop:s0
+oplus.opex.hotres                                           u:object_r:exported_system_prop:s0
+oplus.opex.done                                             u:object_r:exported_system_prop:s0
+oplus.ota_opex.done                                         u:object_r:exported_system_prop:s0
+oplus.opex.finish                                           u:object_r:exported_system_prop:s0
+oplus.opex.merge                                            u:object_r:exported_system_prop:s0
+oplus.opex.updatedone                                       u:object_r:exported_system_prop:s0
+oplus.sau.debug                                             u:object_r:exported_system_prop:s0
+oplus.sau.debug.zip                                         u:object_r:exported_system_prop:s0
+oplus.sau.skip.wait                                         u:object_r:exported_system_prop:s0
+oplus.sau.debug.boot                                        u:object_r:exported_system_prop:s0
+oplus.sau.quick.check                                       u:object_r:exported_system_prop:s0
+sys.oplus.update_engine.dg_check                            u:object_r:exported_system_prop:s0
+sys.oplus.update_engine.dg_serial                           u:object_r:exported_system_prop:s0
+oplus.appdataservice.status                                 u:object_r:exported_system_prop:s0
+oplus.defragservice.status                                  u:object_r:exported_system_prop:s0
+oplus.bt.conn.count                                         u:object_r:exported_system_prop:s0
+oplus.nfc.test                                              u:object_r:exported_system_prop:s0
+security.oplus.lower_kptr_restrict                          u:object_r:oplus_ood_prop:s0
+sys.oplus.ood.onetrace.diag                                 u:object_r:oplus_ood_prop:s0
+sys.oplus.ood.midasd.diag                                   u:object_r:oplus_ood_prop:s0
+sys.oplus.ood.perfetto.diag                                 u:object_r:oplus_ood_prop:s0
+persist.sys.oplus.mainline.preodrefresh                     u:object_r:exported_system_prop:s0
+persist.vendor.oplus.update_required_space                  u:object_r:exported_system_prop:s0
+persist.sys.oplus.omoji.voip.switch                         u:object_r:exported_system_prop:s0
+persist.sys.oplus.omoji.voip.version                        u:object_r:exported_system_prop:s0
+persist.oplus.aps.trace                                     u:object_r:exported_system_prop:s0
+oplus.f2fs.fsckconf                                         u:object_r:exported_system_prop:s0
+persist.oplus.compr.ext                                     u:object_r:exported_system_prop:s0
+persist.oplus.mainlineupdate.status                         u:object_r:exported_system_prop:s0
+persist.oplus.preodex.debug                                 u:object_r:exported_system_prop:s0
+persist.sys.oplus.radio.globalregionlock                    u:object_r:oplus_radiolock_prop:s0
+sys.oplus.audio.systemready                                 u:object_r:exported_system_prop:s0
+persist.sys.oplus.cvt.manager                               u:object_r:opluscvt_prop:s0
+persist.sys.oplus.cvt.unwind                                u:object_r:opluscvt_prop:s0
+persist.sys.oplus.cvt.traced                                u:object_r:opluscvt_prop:s0
+persist.sys.oplus.cvt.manager.max.start                     u:object_r:opluscvt_prop:s0
+persist.sys.oplus.cvt.debug.flags                           u:object_r:opluscvt_prop:s0
+sys.oplus.cvt.manager                                       u:object_r:opluscvt_prop:s0
+sys.oplus.cvt.unwind                                        u:object_r:opluscvt_prop:s0
+sys.oplus.cvt.traced                                        u:object_r:opluscvt_prop:s0
+sys.oplus.cvt.enable                                        u:object_r:opluscvt_prop:s0
+ro.oplus.cvt.manager                                        u:object_r:opluscvt_prop:s0
+ro.oplus.bpf.region.support                                 u:object_r:opluscvt_prop:s0
+persist.sys.oplus.cvt.customize                             u:object_r:opluscvt_prop:s0
+ro.oplus.ffmpeg.enable                                      u:object_r:exported_system_prop:s0
+oplus.compressdedup                                         u:object_r:exported_system_prop:s0
+persist.oplus.display.boot_led_enable                       u:object_r:exported_system_prop:s0
+oplus.aps.ForceCloseChdrDebug                               u:object_r:exported_system_prop:s0
+oplus.aps.forceUseInsensorZoomDebug                         u:object_r:exported_system_prop:s0
+oplus.camera.example.log                                    u:object_r:exported_system_prop:s0
+oplus.camera.fad.enable                                     u:object_r:exported_system_prop:s0
+oplus.camera.fad.log                                        u:object_r:exported_system_prop:s0
+oplus.camera.fbdump                                         u:object_r:exported_system_prop:s0
+oplus.camera.hwi.intf.log                                   u:object_r:exported_system_prop:s0
+oplus.camera.oplus.eis.dump                                 u:object_r:exported_system_prop:s0
+oplus.camera.oplus.wpeEis.dump                              u:object_r:exported_system_prop:s0
+oplus.camera.sod.dump                                       u:object_r:exported_system_prop:s0
+oplus.camera.vd.brightB                                     u:object_r:exported_system_prop:s0
+oplus.camera.vd.brightT0                                    u:object_r:exported_system_prop:s0
+oplus.camera.vd.drawRect                                    u:object_r:exported_system_prop:s0
+oplus.camera.vd.drawRoi                                     u:object_r:exported_system_prop:s0
+oplus.camera.vd.fbdebug                                     u:object_r:exported_system_prop:s0
+oplus.camera.vd.m_drawRectMax                               u:object_r:exported_system_prop:s0
+oplus.camera.vd.setparam                                    u:object_r:exported_system_prop:s0
+oplus.camera.vd.skinLumaB                                   u:object_r:exported_system_prop:s0
+oplus.camera.vd.skinLumaT0                                  u:object_r:exported_system_prop:s0
+oplus.camera.vd.soddebug                                    u:object_r:exported_system_prop:s0
+oplus.camera.vd.sodenable                                   u:object_r:exported_system_prop:s0
+oplus.camera.vd.vndebug                                     u:object_r:exported_system_prop:s0
+oplus.camera.vd.vnenable                                    u:object_r:exported_system_prop:s0
+oplus.camera.vndump                                         u:object_r:exported_system_prop:s0
+oplus.debug.nvram.enable                                    u:object_r:exported_system_prop:s0
+oplus.root.silent.install                                   u:object_r:exported_system_prop:s0
+ro.oplus.carrier.ringtone.version                           u:object_r:exported_system_prop:s0
+ro.oplus.company.ringtone.version                           u:object_r:exported_system_prop:s0
+ro.oplus.cota.sourcepath                                    u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.default_brightness       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.global.btn               u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.hbm_ys                   u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.min_light_in_dnm         u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.normal_max_brightness    u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.xs                       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.apollo.ys                       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.default_brightness_boe          u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.default_brightness_samsung      u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.default_brightness_tm           u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.hbm_ys_boe                      u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.hbm_ys_samsung                  u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.hbm_ys_tm                       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.min_light_in_dnm_boe            u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.min_light_in_dnm_samsung        u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.min_light_in_dnm_tm             u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_max_brightness_boe       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_max_brightness_tm        u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_max_brightness_samsung   u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_min_brightness_tm        u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_min_brightness_samsung   u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.normal_min_brightness_boe       u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.default_brightness        u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.global.btn                u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.hbm_ys                    u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.min_light_in_dnm          u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.normal_max_brightness     u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.normal_min_brightness     u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.xs                        u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.silky.ys                        u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.xs_boe                          u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.xs_samsung                      u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.xs_tm                           u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.ys_boe                          u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.ys_samsung                      u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness.ys_tm                           u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness_default_brightness_4096         u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness_hbm_ys_4096                     u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness_min_light_in_dnm_4096           u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness_normal_max_brightness_4096      u:object_r:exported_system_prop:s0
+ro.oplus.display.brightness_ys_4096                         u:object_r:exported_system_prop:s0
+ro.oplus.display.fingerprint.dimlayer.alpha                 u:object_r:exported_system_prop:s0
+ro.oplus.display.fingerprint.dimlayer.brightness            u:object_r:exported_system_prop:s0
+ro.oplus.display.set.fingerprint.dimlayer.alpha             u:object_r:exported_system_prop:s0
+ro.oplus.display.underscreen.lightsensor.screenshot.period  u:object_r:exported_system_prop:s0
+ro.oplus.dt_customoff                                       u:object_r:exported_system_prop:s0
+ro.oplus.exposure.time                                      u:object_r:exported_system_prop:s0
+ro.oplus.gnss.lab.switch                                    u:object_r:exported_system_prop:s0
+ro.oplus.gota.switch                                        u:object_r:exported_system_prop:s0
+ro.oplus.gps_sensitive_prop                                 u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_level_high                              u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_level_low                               u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_level_middle                            u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_range_gap1                              u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_range_gap2                              u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_range_max                               u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_range_min                               u:object_r:exported_system_prop:s0
+ro.oplus.haptic.lra_value_set                               u:object_r:exported_system_prop:s0
+ro.oplus.hwc.fencetimeoutabort                              u:object_r:exported_system_prop:s0
+ro.oplus.image.base.version                                 u:object_r:exported_system_prop:s0
+ro.oplus.image.my_carrier.type                              u:object_r:exported_system_prop:s0
+ro.oplus.image.my_engineering.date                          u:object_r:exported_system_prop:s0
+ro.oplus.image.my_engineering.date.utc                      u:object_r:exported_system_prop:s0
+ro.oplus.image.my_manifest.version                          u:object_r:exported_system_prop:s0
+ro.oplus.image.my_preload.rebuild.date                      u:object_r:exported_system_prop:s0
+ro.oplus.image.my_preload.rebuild.date.utc                  u:object_r:exported_system_prop:s0
+ro.oplus.image.system_ext.area                              u:object_r:exported_system_prop:s0
+ro.oplus.image.system_ext.brand                             u:object_r:exported_system_prop:s0
+ro.oplus.image.system_ext.date                              u:object_r:exported_system_prop:s0
+ro.oplus.image.system_ext.date.utc                          u:object_r:exported_system_prop:s0
+ro.oplus.is_gota                                            u:object_r:exported_system_prop:s0
+ro.oplus.market.enname                                      u:object_r:exported_system_prop:s0
+ro.oplus.market.name                                        u:object_r:exported_system_prop:s0
+ro.oplus.mtk_gps_L1L5                                       u:object_r:exported_system_prop:s0
+ro.oplus.mtk_gps_mpe                                        u:object_r:exported_system_prop:s0
+ro.oplus.mtk_hybrid_iso                                     u:object_r:exported_system_prop:s0
+ro.oplus.mtk_hybrid_rssi                                    u:object_r:exported_system_prop:s0
+ro.oplus.operator                                           u:object_r:exported_system_prop:s0
+ro.oplus.pipeline_key                                       u:object_r:exported_system_prop:s0
+ro.oplus.sae.version                                        u:object_r:exported_system_prop:s0
+ro.oplus.screen.aod.min                                     u:object_r:exported_system_prop:s0
+ro.oplus.screenhole.border                                  u:object_r:exported_system_prop:s0
+ro.oplus.server_url_1                                       u:object_r:exported_system_prop:s0
+ro.oplus.server_url_2                                       u:object_r:exported_system_prop:s0
+ro.oplus.theme.version                                      u:object_r:exported_system_prop:s0
+ro.oplus.version                                            u:object_r:exported_system_prop:s0
+ro.oplus.version.base                                       u:object_r:exported_system_prop:s0
+ro.oplus.version.my_preload                                 u:object_r:exported_system_prop:s0
+ro.oplus.version.my_stock                                   u:object_r:exported_system_prop:s0
+ro.oplus.wukong.zip_dir                                     u:object_r:exported_system_prop:s0
+ctl.oplus.bsp                                               u:object_r:ctl_bsp_prop:s0
+persist.oppo.network.                                       u:object_r:system_oplus_radio_prop:s0
+persist.sys.oplus.displaymetrics                            u:object_r:exported_system_prop:s0
+oplus.camera.slogan.yuvpath                                 u:object_r:exported_system_prop:s0
+ro.oplus.image.my_company.speaker                           u:object_r:audio_sed_spk_param:s0
+ro.oppo.adb.secure                                          u:object_r:exported_system_prop:s0
+ro.oppo.appautoresolution.default                           u:object_r:exported_system_prop:s0
+ro.oppo.screen.aod.min                                      u:object_r:exported_system_prop:s0
+ro.oppo.version                                             u:object_r:exported_system_prop:s0
+ro.oplus.appautoresolution.default                          u:object_r:exported_system_prop:s0
+ro.oplus.audio.custom.alarm_vol_min                         u:object_r:exported_system_prop:s0
+ro.oplus.audio.detection.support                            u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.tencent.mm                           u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.tencent.mm                            u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.facebook.orca                        u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.facebook.orca                         u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.whatsapp                             u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.whatsapp                              u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.zing.zalo                            u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.zing.zalo                             u:object_r:exported_system_prop:s0
+oplus.video.beauty.org.telegram.messenger                   u:object_r:exported_system_prop:s0
+oppo.video.beauty.org.telegram.messenger                    u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.snapchat.android                     u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.snapchat.android                      u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.discord                              u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.discord                               u:object_r:exported_system_prop:s0
+oplus.video.beauty.com.microsoft.teams                      u:object_r:exported_system_prop:s0
+oppo.video.beauty.com.microsoft.teams                       u:object_r:exported_system_prop:s0
+ro.vendor.oplus.radio.5gSupport                             u:object_r:vendor_oplus_prop:s0
+vendor.oplus.media.vpp.osie_sr.on                           u:object_r:vendor_oplus_prop:s0
+persist.oplus.display.vrr.adfr                              u:object_r:exported_system_prop:s0
+sys.oplus.wifi.iniromupdate                                 u:object_r:exported_system_prop:s0
+sys.oplus.wifi.enablepersistaccess                          u:object_r:exported_system_prop:s0
+sys.oplus.wifi.restorepersistaccess                         u:object_r:exported_system_prop:s0
+oplus.fingerprint.factory                                   u:object_r:oplus_fingerprint_prop:s0
+oplus.fingerprint.gf.package.version                        u:object_r:oplus_fingerprint_prop:s0
+oplus.fingerprint.qrcode.support                            u:object_r:oplus_fingerprint_prop:s0
+oplus.fingerprint.qrcode.value                              u:object_r:oplus_fingerprint_prop:s0
+ro.oplus.bl.disable.dre.enable                              u:object_r:exported_system_prop:s0
+ro.oplus.backlight.threhold                                 u:object_r:exported_system_prop:s0
+ro.oplus.silky.brightness.delay                             u:object_r:exported_system_prop:s0
+oplus.fingerprint.algo.version                              u:object_r:oplus_fingerprint_prop:s0
+sys.oplus.healthinfo.fore.name                              u:object_r:oplus_health_prop:s0
+sys.oplus.healthinfo.fore.pid                               u:object_r:oplus_health_prop:s0
+sys.oplus.rbr_log.dumped                                    u:object_r:exported_system_prop:s0
+sys.oplus.gke.catch                                         u:object_r:exported_system_prop:s0
+vendor.oplus.display.osie_aipq.on                           u:object_r:exported_system_prop:s0
+sys.oplus.widevinekey.state                                 u:object_r:powerctl_prop:s0
+oplus.switch.portrait.center                                u:object_r:exported_system_prop:s0
+ro.oplus.camera.portrait_center.prefix                      u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.tencent.mm                        u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.tencent.wemeet.app                u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.tencent.mobileqq                  u:object_r:exported_system_prop:s0
+oplus.portrait.center.us.zoom.videomeetings                 u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.google.android.apps.tachyon       u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.google.android.apps.meetings      u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.whatsapp                          u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.skype.raider                      u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.microsoft.teams                   u:object_r:exported_system_prop:s0
+oplus.portrait.center.com.discord                           u:object_r:exported_system_prop:s0
+sys.oplus.high.performance                                  u:object_r:exported_system_prop:s0
+sys.oplus.location.config                                   u:object_r:exported_system_prop:s0
+audio.tuning.def_path                                        u:object_r:audio_tunning_prop:s0
+persist.vendor.audio.tuning.def_path                         u:object_r:audio_tunning_prop:s0
+persist.bluetooth.a2dp_aac_abr.enable                       u:object_r:exported_bluetooth_prop:s0
+persist.vendor.fingerprint.optical.support                  u:object_r:oplus_fingerprint_prop:s0
+ro.lmk.limit_killing_array_kb                               u:object_r:lmkd_config_prop:s0
+
+# vendor init scripts set these below the labels AOSP/MTK picked, which the
+# platform neverallows keep from being settable by vendor_init:
+#   persist.bluetooth. -> bluetooth_prop (neverallow base_typeattr_879)
+#   persist.debug.     -> persist_debug_prop (system_restricted)
+#   persist.vendor.fingerprint.version -> vendor_default_prop (vendor_internal)
+# Relabelling them onto types vendor_init may already set keeps the scripts
+# working instead of silencing the denial.  Two of them cannot be relabelled at
+# all - property_contexts rejects a name another file already owns ("Duplicate
+# prefix match detected"), and persist.vendor.radio.telecom.vibrate is owned by
+# device/mediatek/sepolicy_vndr while ro.lineage.* is owned by device/lineage.
+persist.bluetooth.a2dp.lhdc                                 u:object_r:exported_bluetooth_prop:s0
+ro.lmk.nandswap_version                                     u:object_r:lmkd_config_prop:s0
+persist.vendor.fingerprint.version                          u:object_r:oplus_fingerprint_prop:s0
+
+# Properties that no rule labelled, so they fell back to default_prop - where a
+# vendor HAL can never be granted access - or to vendor_default_prop, where a
+# coredomain cannot.  The types are declared in ../public/property.te and the
+# access rules live in property_access.te and in the HALs' own vendor/*.te.
+ro.separate.soft                                            u:object_r:oplus_project_config_prop:s0
+ro.product.hw                                               u:object_r:oplus_project_config_prop:s0
+# Third entry of the OPPO SAR table that /vendor/bin/ccci_rpcd builds at boot:
+# it reads ro.product.hw and ro.vendor.oplus.radio.sar_regionmark (both already
+# labelled, the latter as vendor_oplus_radio_prop) and then this one, which no
+# rule owned - so the read landed on default_prop, which no vendor domain may be
+# granted.  ccci_rpcd is the only binary on the device that references the name
+# and it already holds the get_prop() for the type used here.
+ro.product.sar_operator_map                                 u:object_r:oplus_project_config_prop:s0
+ro.camera.hfr.enable                                        u:object_r:oplus_camera_config_prop:s0
+ro.camera.temperature.limit                                 u:object_r:oplus_camera_config_prop:s0
+ro.camera.videoeis.enable                                   u:object_r:oplus_camera_config_prop:s0
+ro.oplus.camera.                                            u:object_r:oplus_camera_config_prop:s0
+ro.vendor.camera                                            u:object_r:oplus_camera_config_prop:s0
+ro.vendor.camera3.                                          u:object_r:oplus_camera_config_prop:s0
+persist.vendor.camera3.                                     u:object_r:oplus_camera_config_prop:s0
+vendor.camera.                                              u:object_r:oplus_camera_config_prop:s0
+vendor.af.                                                  u:object_r:oplus_camera_config_prop:s0
+ro.audio.silent                                             u:object_r:oplus_audio_config_prop:s0
+persist.vendor.fingerprint.                                 u:object_r:oplus_fingerprint_prop:s0
+vendor.fingerprint.                                         u:object_r:oplus_fingerprint_prop:s0
+persist.debug.wfd.enable                                    u:object_r:oplus_wfd_debug_prop:s0
+persist.vendor.bluetooth.btc.tdd.dynamic20                  u:object_r:mtk_bluetooth_config_prop:s0
+
+# Vendor feature flags that AOSP/MTK code inside system processes probes and that
+# AOSP's own catch-all sends to vendor_default_prop:
+#   ro.vendor.smvr.*   - MTK SMRV (video super resolution) tuning, read by the
+#                        MTK graphics mapper library that surfaceflinger loads
+#   vendor.dp.* / ro.vendor.dp.* / aeev / ged - MTK display and graphics debug
+#                        switches from the same library set
+#   ro.vendor.qti.*    - the Qualcomm voice-assistant flag that AOSP's
+#                        audiopolicy components read unconditionally
+ro.vendor.smvr.                                             u:object_r:mtk_smvr_config_prop:s0
+ro.vendor.dp.bypass.mdp                                     u:object_r:mtk_display_debug_prop:s0
+ro.vendor.mtk_hdr_video_support                             u:object_r:mtk_display_debug_prop:s0
+vendor.dp.rdma.workaround.enable                            u:object_r:mtk_display_debug_prop:s0
+vendor.dp.reduceconfig.disable                              u:object_r:mtk_display_debug_prop:s0
+vendor.debug.mtk.aeev.status                                u:object_r:mtk_display_debug_prop:s0
+vendor.debug.mtk.aeev.status64                              u:object_r:mtk_display_debug_prop:s0
+vendor.debug.ged_dvfs.enable                                u:object_r:mtk_display_debug_prop:s0
+ro.vendor.qti.va_aosp.support                               u:object_r:qti_va_aosp_support_prop:s0
+
+# Second round of the same treatment, from the boot after the first fix set went
+# in - the ODM script writes these and the HALs read them, and none of them had a
+# rule (default_prop) or only AOSP's catch-all families (vendor_default_prop):
+#   oplus.camera.*            - OPPO camera tuning (oplus.camera.debug.maxfps,
+#                               oplus.camera.osense) the camera HAL looks up
+#   ro.mtk_*                  - MTK feature flags; the ODM script sets
+#                               ro.mtk_key_manager_support
+#   persist.vendor.side.fp.*  - side fingerprint support flag the OPPO
+#                               fingerprint HAL sets
+#   the two persist.bluetooth names - the ODM script writes them
+oplus.camera.                                               u:object_r:oplus_camera_config_prop:s0
+ro.mtk_                                                     u:object_r:mtk_feature_flag_prop:s0
+persist.vendor.side.fp.                                     u:object_r:oplus_fingerprint_prop:s0
+persist.bluetooth.absvolume_support                         u:object_r:exported_bluetooth_prop:s0
+persist.vendor.bluetooth.modem_nv_support                   u:object_r:mtk_bluetooth_config_prop:s0
+
+# AOSP labels the persist.device_config.* categories it knows about; the ones it
+# does not fall through to default_prop, which is where the audio HAL's lookup of
+# an unlisted aconfig category landed.  A rule here only catches what AOSP leaves
+# unlabelled, because the longest prefix wins.
+persist.device_config.                                      u:object_r:device_config_generic_prop:s0
+
+# Log tags: liblog appends the tag to this prefix, and AOSP only labels the plain
+# `log.tag.` family, so persist.log.tag.<tag> fell through to default_prop.
+# log_tag_prop is readable by every domain (the platform has
+# `allow domain log_property_type:file`), which is what a log tag needs - no
+# per-domain grant.
+persist.log.tag.                                            u:object_r:log_tag_prop:s0
+
+# HAL module ids that AOSP does not list but that libraries surfaceflinger loads
+# do probe (hw_get_module builds ro.hardware.<module> for these five and they are
+# never set).  AOSP labels the ids it knows as exported_default_prop, which every
+# domain may read, so these follow the same pattern.
+ro.hardware.activity                                        u:object_r:exported_default_prop:s0
+ro.hardware.wifi                                            u:object_r:exported_default_prop:s0
+ro.hardware.usb                                             u:object_r:exported_default_prop:s0
+ro.hardware.graphics                                        u:object_r:exported_default_prop:s0
+ro.hardware.drm                                             u:object_r:exported_default_prop:s0
+
+# The ODM script writes these four.  AOSP's bluetooth_prop cannot be handed to
+# vendor_init (neverallow base_typeattr_879), so they go onto the vendor-shared
+# bluetooth type that the bluetooth domain already reads.
+persist.bluetooth.disableabsvol                             u:object_r:exported_bluetooth_prop:s0
+persist.bluetooth.disableinbandringing                      u:object_r:exported_bluetooth_prop:s0
+persist.bluetooth.specificatcmdsenable                      u:object_r:exported_bluetooth_prop:s0
+persist.bt.iot.enablelogging                                u:object_r:exported_bluetooth_prop:s0
+
+# Two more vendor_init writes that an existing type already fits: lmkd_config_prop
+# is what the earlier ro.lmk.* property went onto, and telephony_config_prop is a
+# system_vendor_config_prop (kernel side readable by every coredomain, writable by
+# vendor_init).
+ro.lmk.swap_is_low_kill_enable                              u:object_r:lmkd_config_prop:s0
+ro.telephony.sim.count                                      u:object_r:telephony_config_prop:s0
+
+# The ODM script sets this one too.  It belongs on vendor_oplus_prop (vendor_init
+# already has a set_prop on it), but a *vendor* property_contexts file may only
+# carry vendor-namespaced names (check_prop_prefix / VTS), and persist.oplus.* is
+# not one, so the label lives here in the system_ext file - system_ext property
+# contexts may reference vendor types, as ro.vendor.oplus.radio.5gSupport does.
+persist.oplus.display.vrr                                   u:object_r:vendor_oplus_prop:s0
+
+# Family labels for the properties whose exact names the three remaining probes
+# cannot reveal (their libraries only carry the prefix).  A prefix rule never
+# overrides a longer AOSP entry, so the names AOSP does label keep their type and
+# only the unlisted ones move - which is what makes this safe:
+#   ro.build.version.   - build metadata; build_prop is readable by every domain
+#                         (`allow domain build_prop:file`), so no grant is needed
+#   media.*             - AOSP labels the media.stagefright./media.recorder. names
+#                         it knows with media_config_prop, so the unlisted ones
+#                         (media.metrics.enabled, media.stagefright.extractremote)
+#                         join them
+ro.build.version.                                           u:object_r:build_prop:s0
+media.metrics.                                              u:object_r:media_config_prop:s0
+media.stagefright.                                          u:object_r:media_config_prop:s0
+
+# Last batch: everything left in the unlabelled default_prop area (the names
+# below are exactly the ones the running device still had there).  None of them
+# is owned by a property_contexts file anywhere, so any domain that reads one -
+# vendor HALs included - is denied, and a file-class denial does not name the
+# property, so they cannot be hunted down one by one.  They go onto the two
+# platform types that every domain may read:
+#   build_prop          - the system-side build metadata (ro.<part>.build.*,
+#                         ro.base_build) for the partitions init itself loads
+#                         (/system, /system_ext, /product, /system_dlkm,
+#                         /bootimage); the platform already has
+#                         `allow domain build_prop:file` and
+#                         `allow init property_type:property_service set`
+#   build_odm_prop /    - the metadata of the partitions vendor_init loads.
+#   build_vendor_prop     These must NOT go to build_prop: only init may set
+#                         build_prop, and vendor_init is the one that sets
+#                         /odm and /vendor build.prop - relabelling them to
+#                         build_prop turned every such set into
+#                         `vendor_init -> build_prop property_service set`.
+#                         AOSP uses these two types for exactly these names
+#                         (ro.odm.build.*, ro.odm_dlkm.build.* -> build_odm_prop;
+#                         ro.vendor.build.*, ro.vendor_dlkm.build.* ->
+#                         build_vendor_prop), and they are already both
+#                         `allow domain <type>:file` and
+#                         `allow vendor_init <type>:property_service set`.
+#   exported_default_prop - the rest (feature flags, locale, kernel/wifi info);
+#                         the platform has `allow domain exported_default_prop:file`
+# Both are the types AOSP uses for the neighbours of these names, and neither
+# needs a per-domain grant.
+ro.base_build                                               u:object_r:build_prop:s0
+ro.bootimage.build.product                                  u:object_r:build_prop:s0
+ro.bootimage.build.version.sdk_minor                        u:object_r:build_prop:s0
+ro.odm.build.id                                             u:object_r:build_odm_prop:s0
+ro.odm.build.product                                        u:object_r:build_odm_prop:s0
+ro.odm.build.tags                                           u:object_r:build_odm_prop:s0
+ro.odm.build.type                                           u:object_r:build_odm_prop:s0
+ro.odm.build.version.release                                u:object_r:build_odm_prop:s0
+ro.odm.build.version.release_or_codename                    u:object_r:build_odm_prop:s0
+ro.odm.build.version.sdk                                    u:object_r:build_odm_prop:s0
+ro.odm.build.version.sdk_minor                              u:object_r:build_odm_prop:s0
+ro.odm.product.cpu.abilist                                  u:object_r:build_odm_prop:s0
+ro.odm.product.cpu.abilist32                                u:object_r:build_odm_prop:s0
+ro.odm.product.cpu.abilist64                                u:object_r:build_odm_prop:s0
+ro.odm_dlkm.build.version.sdk_minor                         u:object_r:build_odm_prop:s0
+ro.product.build.product                                    u:object_r:build_prop:s0
+ro.product.build.version.sdk_minor                          u:object_r:build_prop:s0
+ro.product.system_dlkm.brand                                u:object_r:build_prop:s0
+ro.product.system_dlkm.device                               u:object_r:build_prop:s0
+ro.product.system_dlkm.manufacturer                         u:object_r:build_prop:s0
+ro.product.system_dlkm.model                                u:object_r:build_prop:s0
+ro.product.system_dlkm.name                                 u:object_r:build_prop:s0
+ro.system.build.product                                     u:object_r:build_prop:s0
+ro.system.build.version.sdk_minor                           u:object_r:build_prop:s0
+ro.system.product.cpu.abilist                               u:object_r:build_prop:s0
+ro.system.product.cpu.abilist32                             u:object_r:build_prop:s0
+ro.system.product.cpu.abilist64                             u:object_r:build_prop:s0
+ro.system_dlkm.build.date                                   u:object_r:build_prop:s0
+ro.system_dlkm.build.date.utc                               u:object_r:build_prop:s0
+ro.system_dlkm.build.fingerprint                            u:object_r:build_prop:s0
+ro.system_dlkm.build.id                                     u:object_r:build_prop:s0
+ro.system_dlkm.build.tags                                   u:object_r:build_prop:s0
+ro.system_dlkm.build.type                                   u:object_r:build_prop:s0
+ro.system_dlkm.build.version.incremental                    u:object_r:build_prop:s0
+ro.system_dlkm.build.version.release                        u:object_r:build_prop:s0
+ro.system_dlkm.build.version.release_or_codename            u:object_r:build_prop:s0
+ro.system_dlkm.build.version.sdk                            u:object_r:build_prop:s0
+ro.system_dlkm.build.version.sdk_minor                      u:object_r:build_prop:s0
+ro.system_ext.build.product                                 u:object_r:build_prop:s0
+ro.system_ext.build.version.sdk_minor                       u:object_r:build_prop:s0
+ro.vendor.build.product                                     u:object_r:build_vendor_prop:s0
+ro.vendor.build.version.sdk_minor                           u:object_r:build_vendor_prop:s0
+ro.vendor_dlkm.build.version.sdk_minor                      u:object_r:build_vendor_prop:s0
+bootreceiver.enable                                         u:object_r:exported_default_prop:s0
+hbt.debug                                                   u:object_r:exported_default_prop:s0
+mediatek.wlan.ctia                                          u:object_r:exported_default_prop:s0
+persist.wm.extensions.enabled                               u:object_r:exported_default_prop:s0
+ro.allow.mock.location                                      u:object_r:exported_default_prop:s0
+ro.com.android.mobiledata                                   u:object_r:exported_default_prop:s0
+ro.com.google.clientidbase                                  u:object_r:exported_default_prop:s0
+ro.kernel.version                                           u:object_r:exported_default_prop:s0
+ro.kernel.zio                                               u:object_r:exported_default_prop:s0
+ro.mediatek.wlan.p2p                                        u:object_r:exported_default_prop:s0
+ro.mediatek.wlan.wsc                                        u:object_r:exported_default_prop:s0
+ro.ota.allow_downgrade                                      u:object_r:exported_default_prop:s0
+ro.postinstall.fstab.prefix                                 u:object_r:exported_default_prop:s0
+ro.product.locale                                           u:object_r:exported_default_prop:s0
+ro.support_one_handed_mode                                  u:object_r:exported_default_prop:s0
+ro.wifi.channels                                            u:object_r:exported_default_prop:s0
+ro.zygote.preload.enable                                    u:object_r:exported_default_prop:s0
+
+# MTK's assert -> kernel panic switch.  AOSP's plat_property_contexts labels the
+# whole `persist.sys.` family system_prop, which the platform neverallow
+# base_typeattr_874 keeps away from every domain that is neither coredomain nor
+# vendor_init - so the perf HAL (and, per the device tree's own earlier log, the
+# camera HAL) could never be granted it.  The writers listed in
+# property_access.te keep the same right they have on system_prop today.
+persist.sys.assert.                                         u:object_r:mtk_assert_config_prop:s0
+
+# Last three property families that fell through the platform catch-all to
+# default_prop and showed up as boot-time denials.  None of them is owned by any
+# property_contexts file on the device, so the names can be labelled here; the
+# platform's own `allow domain exported_default_prop:file` then covers every
+# reader, which is what these need: the GPU ones are read by apps as well as by
+# the vendor daemons, and the camera ones by both the vendor camera HALs and the
+# system camera processes they are loaded into.  All three are read-only debug
+# or feature switches today - no domain can set default_prop, so relabelling
+# cannot take a write away - and vendor_init keeps the set it has on
+# exported_default_prop.
+#
+#   debuglog.drv, debuglog.drv.fdvt_drv, debuglog.drv.owe_drv
+#       the legacy (unprefixed) form of MTK's log switches.  libcamdrv_isp.so,
+#       libdip_drv.so, libmtkcam_fdv/owe/twin.so and friends reference the
+#       family, and camerahalserver (mtk_hal_camera) is the domain that got the
+#       read denied.
+#   persist.glt.version
+#       ARM's GL conformance test switch, literal in /vendor/lib64/egl/
+#       libGLES_meow.so.
+#   persist.meow.ddk_lock
+#       built at run time by the same MEOW layer, so the prefix - not the single
+#       name - is what is labelled.
+#   sipa.timer, sipa.pvdd.limit, sipa.proc.time, sipa.pcm.save, sipa.hal.debug
+#       the debug switches of the SIA81xx speaker amplifier, read by
+#       /odm/lib64/libsixth.so inside the audio HAL (hal_audio_default, thread
+#       "writer") every time the speaker path is brought up - libc logs
+#       `Access denied finding property "sipa.<x>"` for each one.  That library
+#       is the only file on the device that references the family.
+debuglog.                                                   u:object_r:exported_default_prop:s0
+persist.glt.                                                u:object_r:exported_default_prop:s0
+persist.meow.                                               u:object_r:exported_default_prop:s0
+sipa.                                                       u:object_r:exported_default_prop:s0
+
+# ---------------------------------------------------------------------------
+# Camera-session round, 2026-10-15 22:03.  Nothing here broke the camera - the
+# session wrote 3 jpegs and a video while these denials were being logged - but
+# each one is a value the reader silently did not get.
+#
+#   jpeg.exif.icc.profile
+#       read by /vendor/lib64/mt6835/libmtkcam_exif.so inside the camera HAL; no rule
+#       owned it so it fell to default_prop.
+#   demo.
+#       MTK's camera demo/plugin switches (demo.near, demo.far, demo.fb,
+#       demo.hole were the ones looked up); the prefix is unowned.
+#   ro.logsystem.usertype
+#       read by /vendor/bin/mnld - the only binary on the device referencing it -
+#       also unowned, so mnld's read landed on default_prop too.
+jpeg.exif.icc.profile                                       u:object_r:exported_default_prop:s0
+demo.                                                       u:object_r:exported_default_prop:s0
+ro.logsystem.usertype                                       u:object_r:exported_default_prop:s0
+
+# The camera/audio switches plat sends to system_prop.  neverallow
+# base_typeattr_874 keeps that type away from every domain that is neither
+# coredomain nor vendor_init, so the vendor halves of these stacks could never be
+# granted them - that is what the camera session's mtk_hal_camera -> system_prop
+# denials were.  They go onto the two types this tree already uses for camera and
+# audio configuration (readers already granted, writers mirrored in
+# property_access.te), keyed on who really reads them:
+#   persist.sys.camera.log.scene, .lao.enable  read by
+#       /vendor/lib64/libcustomer_cameradata.so in the camera HAL
+#   persist.sys.log.debugexif, persist.sys.dump.aps,
+#   persist.sys.state.simulation.flag          referenced by
+#       /odm/lib64/libAlgoProcess.so (OPPO's APS algorithm layer)
+#   persist.sys.enable_mtk_adsp_dump           referenced by
+#       /vendor/lib64/hw/audio.primary.mediatek.so, i.e. the audio HAL
+persist.sys.camera.                                         u:object_r:oplus_camera_config_prop:s0
+persist.sys.log.debugexif                                   u:object_r:oplus_camera_config_prop:s0
+persist.sys.dump.aps                                        u:object_r:oplus_camera_config_prop:s0
+persist.sys.state.simulation.flag                           u:object_r:oplus_camera_config_prop:s0
+persist.sys.enable_mtk_adsp_dump                            u:object_r:oplus_audio_config_prop:s0
+
+# The two camera switches the HAL reads on its first session of every boot and
+# that fell through to default_prop, so under enforcing they were unreadable.
+# The permissive A/B test (androidboot.selinux=permissive, 2026-10-16) made the
+# black-screen reboots go away, so these are the prime suspects: with the value
+# missing the vendor camera stack takes a path that hangs the ISP and the
+# hardware watchdog resets the SoC.  Both live in /odm/lib64/libcamera_core_hwi.so
+# (persist.mtk.camera.log_level also in liboplus_platform_hwi.so), both names are
+# unowned by any property_contexts file, and the camera HAL already holds
+# get_prop() for this type.
+persist.mtk.camera.                                         u:object_r:oplus_camera_config_prop:s0
+oppo.camera.vd.                                             u:object_r:oplus_camera_config_prop:s0
+
+# The third - and, as of the 16:57 build, last - property the camera HAL probes
+# on its first session of each boot (via libmedia_codeclist_capabilities.so,
+# which the HAL process has mapped for its video path).  Unlabelled, it landed on
+# default_prop, which no vendor domain may read; the HAL already holds
+# get_prop() for media_config_prop, and coredomain does too, so a label is all
+# that is needed.  `ro.` means it is read-only by nature.
+ro.mediacodec.max_sample_rate                                u:object_r:media_config_prop:s0
+
+# Shotgun block: every unlabelled, property-shaped name the camera HAL's loaded
+# libraries carry (harvested from /proc/<pid>/maps of the current build).  They
+# all fall through plat's `* -> default_prop` catch-all, which no vendor domain
+# may read (neverallow base_typeattr_223) - and the camera stack hangs and the
+# hardware watchdog resets when a probe it makes comes back denied.  These land
+# on exported_default_prop, which the platform already lets every domain read
+# (`allow domain exported_default_prop:file`), so the read actually succeeds and
+# no new grants are needed.  A name here that is really only a tuning key is
+# harmless: it is simply never read as a property.
+#
+#   vedor.oplus.camera.highpic.enable   - typo'd `vendor.` literal in the OPPO HAL
+#   enc.vid.bps.min/height.min/width.min, vid.fps - video encoder config probes
+#   audio.record, audio.record.error, audio.track, audio.service.client_wait_ms
+#       - read by the HAL's video-recording path (audio side)
+vedor.                                                      u:object_r:exported_default_prop:s0
+enc.vid.                                                    u:object_r:exported_default_prop:s0
+vid.                                                        u:object_r:exported_default_prop:s0
+audio.record                                                u:object_r:exported_default_prop:s0
+audio.record.error                                          u:object_r:exported_default_prop:s0
+audio.track                                                 u:object_r:exported_default_prop:s0
+audio.service.                                              u:object_r:exported_default_prop:s0
+media.camera                                                u:object_r:exported_default_prop:s0
+media.extractor                                             u:object_r:exported_default_prop:s0
+media.metrics                                               u:object_r:exported_default_prop:s0
+media.resource_manager                                      u:object_r:exported_default_prop:s0
+cam.egnsavefile.enable                                      u:object_r:exported_default_prop:s0
+fsc.debug                                                   u:object_r:exported_default_prop:s0
+mgo.                                                        u:object_r:exported_default_prop:s0
+slogan.enable                                               u:object_r:exported_default_prop:s0
+engineercamera.                                             u:object_r:exported_default_prop:s0
+tunning.                                                    u:object_r:exported_default_prop:s0
+feature.                                                    u:object_r:exported_default_prop:s0
+low_flicker_mode.                                           u:object_r:exported_default_prop:s0
+refocus.                                                    u:object_r:exported_default_prop:s0
+cnr.                                                        u:object_r:exported_default_prop:s0
+mss.                                                        u:object_r:exported_default_prop:s0
+sw_wpe.                                                     u:object_r:exported_default_prop:s0
+ynr.                                                        u:object_r:exported_default_prop:s0
+
+# The name behind the recurring `mtk_hal_camera -> default_prop` denial, caught
+# live with an uprobe on __system_property_find: `0com.tencent.mm`.  The MTK
+# camera stack keeps a hardcoded list of third-party camera apps
+# (com.tencent.mm, com.snapchat.android, com.whatsapp, ...) and reads
+# `"0" + package` for each one to get per-app tuning.  Every entry starts with
+# `com.`, so this single prefix covers the whole family; a digit-first property
+# name is legal (init only rejects a leading/trailing dot and `..`), so the
+# label is accepted and the read now actually succeeds under enforcing instead
+# of hanging the camera path.
+0com.                                                       u:object_r:exported_default_prop:s0
+
+# cameraserver reads the privileged-app list of the vendor camera stack while
+# bringing a session up.  It was vendor_default_prop, which a coredomain may not
+# read at all.  oplus_camera_config_prop already carries get_prop(coredomain)
+# and the same set_prop(vendor_init) that vendor_default_prop had, so the
+# relabel only widens the read side.
+persist.vendor.camera.privapp.list                          u:object_r:oplus_camera_config_prop:s0

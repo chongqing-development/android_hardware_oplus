@@ -1,0 +1,18 @@
+# Rules for hal_health_default touching device types
+
+allow hal_health_default hal_charger_hwservice:hwservice_manager { find };
+allow hal_health_default hal_charger_oplus:binder { call };
+allow hal_health_default hal_oplus_misc_aidl_service:service_manager { find };
+allow hal_health_default hal_oplus_touch_aidl_default:binder { call transfer };
+allow hal_health_default hal_oplus_touch_aidl_default:fd { use };
+allow hal_health_default hal_oplus_touch_aidl_service:service_manager { find };
+allow hal_health_default hal_oplus_touch_hwservice:hwservice_manager { find };
+allow hal_health_default proc_touchpanel_file:chr_file { ioctl open read write };
+allow hal_health_default proc_touchpanel_file:dir r_dir_perms;
+allow hal_health_default proc_touchpanel_file:file { create getattr ioctl lock map open read setattr unlink watch watch_reads write };
+
+# Battery nodes.  /sys/class/power_supply is relabelled to sysfs_battery_supply by
+# genfs_contexts, and the MTK gauge tree is sysfs_batteryinfo; the health HAL is
+# the only reader of both, but the base policy grants it neither.
+r_dir_file(hal_health_default, sysfs_battery_supply)
+r_dir_file(hal_health_default, sysfs_batteryinfo)

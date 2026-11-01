@@ -1,0 +1,80 @@
+# hal_oplus_performance_aidl - ported from the stock vendor policy
+
+type hal_oplus_performance_aidl, domain;
+typeattribute hal_oplus_performance_aidl mlstrustedsubject;
+
+type hal_oplus_performance_aidl_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_oplus_performance_aidl)
+
+allow hal_oplus_performance_aidl acm_device:chr_file { ioctl open read write };
+allow hal_oplus_performance_aidl audioserver:binder { transfer };
+allow hal_oplus_performance_aidl cameraserver:binder { transfer };
+allow hal_oplus_performance_aidl cgroup:file { getattr open read setattr write };
+allow hal_oplus_performance_aidl cgroup_v2:file { getattr open read setattr write };
+allow hal_oplus_performance_aidl domain:dir r_dir_perms;
+allow hal_oplus_performance_aidl domain:file rw_file_perms;
+allow hal_oplus_performance_aidl domain:lnk_file r_file_perms;
+allow hal_oplus_performance_aidl dumpstate:binder { transfer };
+allow hal_oplus_performance_aidl hal_fingerprint_oplus:binder { transfer };
+allow hal_oplus_performance_aidl hal_graphics_composer_default:binder { transfer };
+allow hal_oplus_performance_aidl hal_oplus_performance_aidl_service:service_manager { add find };
+allow hal_oplus_performance_aidl mediaserver:binder { transfer };
+allow hal_oplus_performance_aidl mem_monitor_proc:file { getattr open read write };
+allow hal_oplus_performance_aidl mtk_hal_c2:binder { transfer };
+allow hal_oplus_performance_aidl nandswap_vnd_proc:dir { open read search };
+allow hal_oplus_performance_aidl nandswap_vnd_proc:file rw_file_perms;
+allow hal_oplus_performance_aidl oplus_ctp_proc:dir { search };
+allow hal_oplus_performance_aidl oplus_ctp_proc:file rw_file_perms;
+allow hal_oplus_performance_aidl oplus_ctp_read_proc:file { open read };
+allow hal_oplus_performance_aidl oplus_filemonitor_proc:dir { search };
+allow hal_oplus_performance_aidl oplus_filemonitor_proc:file { getattr open read write };
+allow hal_oplus_performance_aidl oplus_frame_rate_proc:file rw_file_perms;
+allow hal_oplus_performance_aidl oplus_mem_monitor:file { getattr open read write };
+allow hal_oplus_performance_aidl oplus_performance_proc:file rw_file_perms;
+allow hal_oplus_performance_aidl oplus_process_reclaim_proc:file { getattr ioctl open read write };
+allow hal_oplus_performance_aidl oplus_sched_assist_scene_proc:file rw_file_perms;
+allow hal_oplus_performance_aidl oplus_scheduler_sched_assist_proc:dir { search };
+allow hal_oplus_performance_aidl oplus_scheduler_sched_assist_proc:file rw_file_perms;
+allow hal_oplus_performance_aidl oplus_storage_io_metrics_proc:dir { search };
+allow hal_oplus_performance_aidl oplus_storage_io_metrics_proc:file { getattr open read write };
+allow hal_oplus_performance_aidl oplus_task_sched_proc:dir { open read search };
+allow hal_oplus_performance_aidl oplus_task_sched_proc:file { getattr open read setattr write };
+allow hal_oplus_performance_aidl oplus_uprobe_proc:dir { search };
+allow hal_oplus_performance_aidl oplus_uprobe_proc:file { getattr open read write };
+allow hal_oplus_performance_aidl osvelte_device:chr_file { ioctl open read write };
+allow hal_oplus_performance_aidl platform_app:binder { transfer };
+allow hal_oplus_performance_aidl platform_app:dir { search };
+allow hal_oplus_performance_aidl platform_app:file rw_file_perms;
+allow hal_oplus_performance_aidl priv_app:binder { transfer };
+allow hal_oplus_performance_aidl proc:file { getattr open read setattr write };
+allow hal_oplus_performance_aidl proc_devinfo_file:dir { search };
+allow hal_oplus_performance_aidl proc_devinfo_file:file rw_file_perms;
+allow hal_oplus_performance_aidl proc_ufssignal:file { getattr open read };
+allow hal_oplus_performance_aidl proc_version:file { getattr open read };
+allow hal_oplus_performance_aidl process_reclaim_proc:file { getattr open read write };
+allow hal_oplus_performance_aidl servicemanager:binder { call transfer };
+allow hal_oplus_performance_aidl surfaceflinger:binder { transfer };
+allow hal_oplus_performance_aidl sysfs:file { getattr open read write };
+allow hal_oplus_performance_aidl sysfs_devices_system_cpu:file { open read write };
+allow hal_oplus_performance_aidl sysfs_fs_f2fs:dir { open read search };
+allow hal_oplus_performance_aidl sysfs_fs_f2fs:file rw_file_perms;
+allow hal_oplus_performance_aidl sysfs_zram:dir { open read search };
+allow hal_oplus_performance_aidl sysfs_zram:file { getattr open read setattr write };
+allow hal_oplus_performance_aidl system_app:binder { transfer };
+allow hal_oplus_performance_aidl system_app:dir { search };
+allow hal_oplus_performance_aidl system_app:file rw_file_perms;
+allow hal_oplus_performance_aidl system_server:binder { transfer };
+allow hal_oplus_performance_aidl tee_device:chr_file { ioctl open read write };
+allow hal_oplus_performance_aidl untrusted_app:dir { search };
+allow hal_oplus_performance_aidl untrusted_app:file rw_file_perms;
+allow hal_oplus_performance_aidl untrusted_app_25:dir { search };
+allow hal_oplus_performance_aidl untrusted_app_25:file rw_file_perms;
+allow hal_oplus_performance_aidl untrusted_app_27:dir { search };
+allow hal_oplus_performance_aidl untrusted_app_27:file rw_file_perms;
+allow hal_oplus_performance_aidl untrusted_app_29:binder { transfer };
+allow hal_oplus_performance_aidl untrusted_app_29:dir { search };
+allow hal_oplus_performance_aidl untrusted_app_29:file rw_file_perms;
+allow hal_oplus_performance_aidl untrusted_app_all:binder { transfer };
+
+# the HAL reads MTK's assert->panic switch (private/property_contexts)
+get_prop(hal_oplus_performance_aidl, mtk_assert_config_prop)

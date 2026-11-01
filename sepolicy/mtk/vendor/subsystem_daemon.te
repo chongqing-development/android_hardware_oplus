@@ -1,0 +1,27 @@
+# subsystem_daemon - ported from the stock vendor policy
+
+type subsystem_daemon, domain;
+hal_server_domain(subsystem_daemon, hal_telephony)
+hal_server_domain(subsystem_daemon, subsys_hal_transfer)
+hal_client_domain(subsystem_daemon, hal_commcenter)
+hal_client_domain(subsystem_daemon, hal_mtk_nvramagent)
+typeattribute subsystem_daemon mlstrustedsubject;
+
+type subsystem_daemon_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(subsystem_daemon)
+
+allow subsystem_daemon ccci_device:chr_file { open read write };
+allow subsystem_daemon init:unix_stream_socket { connectto };
+allow subsystem_daemon proc_swtp:file { getattr open read write };
+allow subsystem_daemon property_socket:sock_file { write };
+allow subsystem_daemon self:qipcrtr_socket { create getattr read setopt write };
+allow subsystem_daemon subsystem_config_file:file { getattr open read };
+allow subsystem_daemon subsystem_ttycmipc_device:chr_file { getattr ioctl open read write };
+allow subsystem_daemon sysfs_ccci:dir { search };
+allow subsystem_daemon sysfs_ccci:file { open read };
+allow subsystem_daemon sysfs_mipi_hopping:file { getattr open read setattr write };
+allow subsystem_daemon sysfs_osc:file { getattr open read setattr write };
+allow subsystem_daemon system_app:binder { call transfer };
+get_prop(subsystem_daemon, vendor_mtk_radio_prop)
+get_prop(subsystem_daemon, vendor_oplus_radio_prop)
+set_prop(subsystem_daemon, vendor_sts_prop)

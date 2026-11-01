@@ -1,0 +1,9 @@
+# Rules for nvram_daemon touching device types
+
+allow nvram_daemon hal_project_aidl_service:service_manager { find };
+allow nvram_daemon oplus_block_device:blk_file { open read };
+allow nvram_daemon oplus_project_proc:file { getattr open read };
+allow nvram_daemon proc_devinfo_file:dir { getattr open read search };
+allow nvram_daemon proc_devinfo_file:file { getattr open read };
+allow nvram_daemon proc_opluscustom_file:dir { getattr open read search };
+allow nvram_daemon vendor_nw_exported_system_prop:property_service { set };

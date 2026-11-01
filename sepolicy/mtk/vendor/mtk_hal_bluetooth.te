@@ -1,0 +1,9 @@
+# Rules for mtk_hal_bluetooth touching device types
+
+allow mtk_hal_bluetooth hal_project_aidl_service:service_manager { find };
+allow mtk_hal_bluetooth oplus_project_proc:dir r_dir_perms;
+allow mtk_hal_bluetooth oplus_project_proc:file r_file_perms;
+allow mtk_hal_bluetooth proc_stpbt:dir { search };
+allow mtk_hal_bluetooth proc_stpbt:file r_file_perms;
+allow mtk_hal_bluetooth vendor_bt_data_file:dir { add_name getattr ioctl lock open read search watch watch_reads write };
+allow mtk_hal_bluetooth vendor_bt_data_file:file create_file_perms;

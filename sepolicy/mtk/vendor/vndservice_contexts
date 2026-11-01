@@ -1,0 +1,8 @@
+# VND services
+
+dp.service                                   u:object_r:dp_service:s0
+touchDeamonBinder                            u:object_r:touchDeamonBinder_service:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon u:object_r:goodix_fingerprint_vndservice:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonExt u:object_r:goodix_fingerprint_vndservice:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonHbd u:object_r:goodix_fingerprint_vndservice:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonFido u:object_r:goodix_fingerprint_vndservice:s0

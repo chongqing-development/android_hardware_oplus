@@ -1,0 +1,3 @@
+# Rules for fuelgauged touching device types
+
+r_dir_file(fuelgauged, sysfs_battery_supply)

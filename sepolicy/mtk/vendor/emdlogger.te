@@ -1,0 +1,10 @@
+# MTK's debug policy runs the modem logging daemon in the emdlogger domain
+# (device/mediatek/sepolicy_vndr/debug/{private,vendor}/emdlogger.te), but the
+# binary only gets there once /system_ext/bin/emdlogger is labelled - see
+# private/file_contexts, which adds the label this port needs.
+#
+# MTK's debug/vendor/emdlogger.te already covers the ccci_*_device and
+# sysfs_ccci accesses the daemon makes; the two MTK sysfs nodes below it also
+# reads are not covered there and cannot be added in MTK's policy.
+allow emdlogger sysfs_boot_info:file r_file_perms;
+allow emdlogger sysfs_soc_ccb_gear:file r_file_perms;

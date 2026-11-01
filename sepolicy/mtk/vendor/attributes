@@ -1,0 +1,24 @@
+# Extra attributes required by the device policy
+
+hal_attribute(camera_rfi)
+hal_attribute(charger)
+hal_attribute(commcenter)
+hal_attribute(cryptoeng)
+hal_attribute(displaycolorfeature)
+hal_attribute(displaypanelfeature)
+hal_attribute(felica)
+hal_attribute(fido)
+hal_attribute(midas_aidl)
+hal_attribute(mtk_aov)
+hal_attribute(mtk_batching)
+hal_attribute(nfcextns)
+hal_attribute(oplusSensor_aidl)
+hal_attribute(oplus_nfc)
+hal_attribute(oplus_touch)
+hal_attribute(oplus_touch_aidl)
+hal_attribute(sendextcamcmd)
+hal_attribute(soter)
+hal_attribute(urcc)
+attribute subsys_hal_transfer;
+attribute subsys_hal_transfer_server;
+attribute vendor_persist_type;

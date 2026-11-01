@@ -1,0 +1,12 @@
+# mtk_hal_batching - ported from the stock vendor policy
+
+type mtk_hal_batching, domain;
+hal_server_domain(mtk_hal_batching, hal_mtk_batching)
+
+type mtk_hal_batching_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(mtk_hal_batching)
+
+allow mtk_hal_batching aol_flp_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow mtk_hal_batching servicemanager:binder { call transfer };
+allow mtk_hal_batching servicemanager:fd { use };
+get_prop(mtk_hal_batching, vendor_mtk_flp_prop)

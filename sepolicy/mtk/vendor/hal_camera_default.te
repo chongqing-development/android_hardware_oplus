@@ -1,0 +1,6 @@
+# Rules for hal_camera_default touching device types
+
+allow hal_camera_default fwk_osense_aidl_service:service_manager { find };
+allow hal_camera_default oplus_sched_assist_scene_proc:file rw_file_perms;
+allow hal_camera_default persist_camera_file:dir { add_name append create getattr ioctl lock map open read remove_name rename rmdir search setattr unlink watch watch_reads write };
+allow hal_camera_default persist_camera_file:file create_file_perms;

@@ -1,0 +1,5 @@
+# kcmdlinectrl reads the firmware devicetree; the label comes from the base
+# genfs_contexts, the access rule is missing (stock grants it to the other MTK
+# domains, e.g. ccci_mdinit and aee_aedv).
+
+r_dir_file(kcmdlinectrl, sysfs_dt_firmware_android)

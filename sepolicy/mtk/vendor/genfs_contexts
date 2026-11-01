@@ -1,0 +1,242 @@
+# /proc and /sysfs labels
+
+genfscon proc /perfmgr/boost_ctrl/cpu_ctrl/sched_assist_boost_freq u:object_r:proc_slide_enable:s0
+genfscon proc /task_info/task_sched_info/task_sched_info_enable u:object_r:oplus_ctp_proc:s0
+genfscon proc /task_info/task_sched_info/sched_info_threshold u:object_r:oplus_ctp_proc:s0
+genfscon proc /oplus_storage/storage_reliable/oplus_uprobe u:object_r:oplus_uprobe_proc:s0
+genfscon proc /mtk_lpm/cpuidle/spm/oplus_rpmh_master_stats u:object_r:oplus_rpmh_stats_proc:s0
+genfscon proc /oplus_scheduler/sched_assist/im_flag_app u:object_r:oplus_imflag_app_proc:s0
+genfscon proc /oplus_storage/file_monitor/remove_event u:object_r:oplus_filemonitor_proc:s0
+genfscon proc /task_info/task_sched_info/sched_buffer u:object_r:oplus_ctp_read_proc:s0
+genfscon proc /task_info/task_sched_info/io_backtrace u:object_r:oplus_ctp_proc:s0
+genfscon proc /oplus_storage/file_monitor/path_filter u:object_r:oplus_filemonitor_proc:s0
+genfscon proc /sys/kerenl/sysctl_ib_duration_coedecay u:object_r:proc_slide_enable:s0
+genfscon proc /task_info/task_sched_info/d_backtrace u:object_r:oplus_ctp_proc:s0
+genfscon proc /task_info/task_sched_info/limit_table u:object_r:oplus_ctp_proc:s0
+genfscon proc /oplus_locking/kern_lock_stats_rclear u:object_r:oplus_kern_lock_stats_rclear_proc:s0
+genfscon proc /mtk_lpm/cpuidle/spm/oplus_rpmh_stats u:object_r:oplus_rpmh_stats_proc:s0
+genfscon proc /task_info/task_sched_info/d_convert u:object_r:oplus_ctp_proc:s0
+genfscon proc /mtk_lpm/spm/oplus_rpmh_master_stats u:object_r:oplus_rpmh_stats_proc:s0
+genfscon proc /task_info/task_sched_info/pids_set u:object_r:oplus_ctp_proc:s0
+genfscon proc /task_info/task_sched_info/tids_set u:object_r:oplus_ctp_proc:s0
+genfscon proc /task_info/task_sched_info/version u:object_r:oplus_ctp_proc:s0
+genfscon proc /task_overload/skip_goplus_enabled u:object_r:skip_goplus_enabled:s0
+genfscon proc /sys/kernel/prefer_silver_enabled u:object_r:oplus_prefer_silver_proc:s0
+genfscon proc /charger/charger_factorymode_test u:object_r:oplus_charger_proc:s0
+genfscon proc /charger/integrate_gauge_fcc_flag u:object_r:oplus_integrate_gauge_fcc_flag_proc:s0
+genfscon proc /sys/kernel/task_cpustats_enable u:object_r:oplus_ctp_proc:s0
+genfscon proc /sys/kernel/sched_assist_enabled u:object_r:oplus_sched_assist_proc:s0
+genfscon proc /sys/vm/compaction_proactiveness u:object_r:proc_compaction_proactiveness:s0
+genfscon proc /oplus_locking/thread_info_ctrl u:object_r:oplus_thread_info_ctrl_proc:s0
+genfscon proc /oplus_locking/fatal_lock_stats u:object_r:oplus_fatal_lock_stats_proc:s0
+genfscon proc /sys/kernel/input_boost_enabled u:object_r:proc_slide_enable:s0
+genfscon proc /sys/kernel/slide_boost_enabled u:object_r:proc_slide_enable:s0
+genfscon proc /oplus_locking/kern_lock_stats u:object_r:oplus_kern_lock_stats_proc:s0
+genfscon proc /oplus_locking/lock_thres_ctrl u:object_r:oplus_lock_thres_ctrl_proc:s0
+genfscon proc /sys/kernel/sched_assist_scene u:object_r:oplus_sched_assist_scene_proc:s0
+genfscon proc /oplus_locking/top_lock_stats u:object_r:oplus_top_lock_stats_proc:s0
+genfscon proc /sys/kernel/ext4_fsync_enable u:object_r:proc_fsync:s0
+genfscon proc /sys/walt/slide_boost_enabled u:object_r:proc_slide_enable:s0
+genfscon proc /mtk_lpm/spm/oplus_rpmh_stats u:object_r:oplus_rpmh_stats_proc:s0
+genfscon proc /oplus_scheduler/sched_assist u:object_r:oplus_scheduler_sched_assist_proc:s0
+genfscon proc /oplus_dualSta/is1x1IOTRouter u:object_r:proc_dualSta_file:s0
+genfscon proc /sys/fbg/frame_boost_enabled u:object_r:proc_fbg_sysctl:s0
+genfscon proc /sys/fbg/input_boost_enabled u:object_r:proc_fbg_sysctl:s0
+genfscon proc /sys/fbg/slide_boost_enabled u:object_r:proc_fbg_sysctl:s0
+genfscon proc /task_overload/abnormal_task u:object_r:oplus_abnormal_task:s0
+genfscon proc /sys/kernel/cpu_multi_thread u:object_r:oplus_performance_proc:s0
+genfscon proc /sys/kernel/firmware_config u:object_r:proc_touchpanel_file:s0
+genfscon proc /sys/kernel/sched_impt_tgid u:object_r:oplus_scheduler_sched_assist_proc:s0
+genfscon proc /oplus_frame_boost/sys_ctrl u:object_r:proc_frame_boost_sys_ctrl:s0
+genfscon proc /mtk_mali/logbuf_exception u:object_r:proc_mtk_mali_logbuf_exception:s0
+genfscon proc /oplusVersion/operatorName u:object_r:oplus_project_proc:s0
+genfscon proc /oplus_init_watchdog/debug u:object_r:oplus_theia_proc:s0
+genfscon proc /oplus_storage/io_metrics/ u:object_r:oplus_storage_io_metrics_proc:s0
+genfscon proc /sys/kernel/animation_type u:object_r:proc_slide_enable:s0
+genfscon proc /sys/fbg/frame_boost_debug u:object_r:proc_fbg_sysctl:s0
+genfscon proc /charger/reserve_soc_debug u:object_r:oplus_charger_proc:s0
+genfscon proc /oplus_mem/process_reclaim u:object_r:oplus_process_reclaim_proc:s0
+genfscon proc /oplus_init_watchdog/kick u:object_r:oplus_theia_proc:s0
+genfscon proc /mtk_lpm/spm/system_stats u:object_r:oplus_rpmh_stats_proc:s0
+genfscon proc /oplus_mem/memory_monitor u:object_r:oplus_mem_monitor:s0
+genfscon proc /mtk_lpm/spm/system_stat u:object_r:proc_power:s0
+genfscon proc /mtk_mali/logbuf_regular u:object_r:proc_mtk_mali_logbuf_regular:s0
+genfscon proc /oplusVersion/engVersion u:object_r:oplus_project_proc:s0
+genfscon proc /oplusVersion/pcbVersion u:object_r:oplus_project_proc:s0
+genfscon proc /oplusVersion/prjVersion u:object_r:oplus_project_proc:s0
+genfscon proc /jank_info/cpu_jank_info u:object_r:oplus_task_sched_proc:s0
+genfscon proc /task_info/task_cpustats u:object_r:oplus_ctp_proc:s0
+genfscon proc /mag_soft_parameter.json u:object_r:proc_mag:s0
+genfscon proc /sys/vm/min_free_kbytes u:object_r:proc_min_free_kbytes:s0
+genfscon proc /oplusVersion/modemType u:object_r:oplus_project_proc:s0
+genfscon proc /eas_opt/iowait_config/ u:object_r:oplus_iowait_config:s0
+genfscon proc /oplusVersion/serialID u:object_r:oplus_project_proc:s0
+genfscon proc /sys/kernel/frame_rate u:object_r:oplus_frame_rate_proc:s0
+genfscon proc /sys/vm/kswapd_threads u:object_r:oplus_kswapd_threads:s0
+genfscon proc /swpm/swpm_sp_ddr_idx u:object_r:proc_swpm:s0
+genfscon proc /mtk_lpm/spm/26m_stat u:object_r:proc_power:s0
+genfscon proc /mtk_img_debug/daemon u:object_r:proc_img_daemon:s0
+genfscon proc /mtk_img_debug/kernel u:object_r:proc_img_kernel:s0
+genfscon proc /mtk_img_debug/stream u:object_r:proc_img_stream:s0
+genfscon proc /mtk_aov_debug/kernel u:object_r:proc_aov_kernel:s0
+genfscon proc /sensor/pressure_cali u:object_r:proc_eng_cali_file:s0
+genfscon proc /oplusVersion/prjName u:object_r:oplus_project_proc:s0
+genfscon proc /oplus_init_watchdog/ u:object_r:oplus_theia_proc:s0
+genfscon proc /charger_critical_log u:object_r:proc_charger_critical_log_file:s0
+genfscon proc /vibrator/touch_style u:object_r:oplus_vibrator_touch_style_proc:s0
+genfscon proc /oplusVersion/RFType u:object_r:oplus_project_proc:s0
+genfscon proc /charging_limit_time u:object_r:proc_charging_limit_time_file:s0
+genfscon proc /oplus_secure_common u:object_r:proc_oplus_secure_common_file:s0
+genfscon proc /oplusSensorFeature/ u:object_r:proc_sensor_feature:s0
+genfscon proc /mmdvfs/mmdvfs_opp u:object_r:proc_mmdvfs_mmdvfs_opp:s0
+genfscon proc /batt_param_noplug u:object_r:oplus_batt_param_proc:s0
+genfscon proc /sys/kernel/printk u:object_r:proc_printk:s0
+genfscon proc /fastchg_fw_update u:object_r:proc_fastchg_fw_update_file:s0
+genfscon proc /swtp_status_value u:object_r:proc_swtp:s0
+genfscon proc /aputag/apusys_rv u:object_r:proc_apusys_rv_debug:s0
+genfscon proc /mdla/mdla_memory u:object_r:proc_mdla_mdla_memory_debug:s0
+genfscon proc /mtk_cam_dbg_dump u:object_r:procfs_cam_dbg:s0
+genfscon proc /mtk_cam_exp_dump u:object_r:procfs_cam_exception:s0
+genfscon proc /theiaPwkTestNode u:object_r:oplus_theia_proc:s0
+genfscon proc /last_boot_reason u:object_r:last_boot_reason_proc:s0
+genfscon proc /sensor/als_cali u:object_r:proc_oplus_als_file:s0
+genfscon proc /pwkMonitorParam u:object_r:oplus_theia_proc:s0
+genfscon proc /shutdown_detect u:object_r:oplus_shutdowndetect_proc:s0
+genfscon proc /process_reclaim u:object_r:process_reclaim_proc:s0
+genfscon proc /ufs_signalShow/ u:object_r:proc_ufssignal:s0
+genfscon proc /mmqos/mmqos_bw u:object_r:proc_mmqos_mmqos_bw:s0
+genfscon proc /tfa98xx-34/rpc u:object_r:oplus_tfa98xx_rpc_proc:s0
+genfscon proc /theiaPwkReport u:object_r:oplus_project_proc:s0
+genfscon proc /ui_soc_decimal u:object_r:oplus_ui_soc_decimal_proc:s0
+genfscon proc /memory_monitor u:object_r:mem_monitor_proc:s0
+genfscon proc /apusys_logger u:object_r:proc_apusys_rv_debug:s0
+genfscon proc /task_cpustats u:object_r:oplus_ctp_read_proc:s0
+genfscon proc /charger_cycle u:object_r:oplus_charger_cycle_proc:s0
+genfscon proc /ppc/p_active u:object_r:proc_call_state:s0
+genfscon proc /dpmaif_debug u:object_r:proc_dpmaif_debug:s0
+genfscon proc /nandswap_vnd u:object_r:nandswap_vnd_proc:s0
+genfscon proc /brightSwitch u:object_r:oplus_theia_proc:s0
+genfscon proc /tristatekey u:object_r:proc_tristatekey:s0
+genfscon proc /charger_log u:object_r:oplus_charger_log_proc:s0
+genfscon proc /oplusCustom u:object_r:proc_opluscustom_file:s0
+genfscon proc /crash_cause u:object_r:proc_crash_cause_file:s0
+genfscon proc /blackSwitch u:object_r:oplus_theia_proc:s0
+genfscon proc /sgefreqinfo u:object_r:oplus_ctp_proc:s0
+genfscon proc /cam_kern_fb u:object_r:oplus_proc_cam_kern_fb:s0
+genfscon proc /oplus_nfc/ u:object_r:oplus_nfc_proc:s0
+genfscon proc /opbootfrom u:object_r:proc_bootfrom:s0
+genfscon proc /touchpanel u:object_r:proc_touchpanel_file:s0
+genfscon proc /qcom_flash u:object_r:proc_flash_light_file:s0
+genfscon proc /sim_detect u:object_r:proc_sim_detect_file:s0
+genfscon proc /sensorlist u:object_r:oplus_sensorlist_proc:s0
+genfscon proc /boost_pool u:object_r:proc_boost_pool:s0
+genfscon proc /apusys_rv u:object_r:proc_apusys_rv_debug:s0
+genfscon proc /vibrator/ u:object_r:oplus_vibrator_proc:s0
+genfscon proc /wireless/ u:object_r:procfs_oem_wireless:s0
+genfscon proc /last_bus u:object_r:proc_last_bus:s0
+genfscon proc /touchkey u:object_r:proc_touchkey_file:s0
+genfscon proc /charger/ u:object_r:vendor_proc_charger:s0
+genfscon proc /eas_opt/ u:object_r:oplus_eas_opt:s0
+genfscon proc /sgeinfo u:object_r:oplus_ctp_proc:s0
+genfscon proc /storage u:object_r:oplus_storage_proc:s0
+genfscon proc /phoenix u:object_r:proc_phoenix:s0
+genfscon proc /devinfo u:object_r:proc_devinfo_file:s0
+genfscon proc /clkdbg u:object_r:proc_clkdbg:s0
+genfscon proc /sensor u:object_r:proc_oplus_sensor_file:s0
+genfscon proc /stpbt u:object_r:proc_stpbt:s0
+genfscon sysfs /devices/platform/soc/soc:14000000.dispsys-config/disp_plat_dbg_buf u:object_r:sysfs_disp_plat_dbg:s0
+genfscon sysfs /devices/platform/soc/11270000.ufshci/mmc_host/mmc0/mmc0:0001(/.*)? u:object_r:emmc_base_info_node:s0
+genfscon sysfs /devices/platform/soc/soc:oplus,mms_gauge/oplus_mms/gauge/battery u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:oplus,mms_wired/oplus_mms/wired/usb u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/11270000.ufshci/ufs_transmission_status u:object_r:sysfs_ufs_trans_file:s0
+genfscon sysfs /devices/platform/14000000.dispsys-config/disp_plat_dbg_buf u:object_r:sysfs_disp_plat_dbg:s0
+genfscon sysfs /devices/platform/bootdevice/mmc_host/mmc0/mmc0:0001(/.*)? u:object_r:emmc_base_info_node:s0
+genfscon sysfs /firmware/devicetree/base/chosen/aee,DB_PLATFORM_NAME u:object_r:sysfs_aee_encrypt:s0
+genfscon sysfs /firmware/devicetree/base/chosen/aee,encrypt_version u:object_r:sysfs_aee_encrypt:s0
+genfscon sysfs /devices/platform/odm/odm:oplus_charger/power_supply u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/bootdevice/ufs_transmission_status u:object_r:sysfs_ufs_trans_file:s0
+genfscon sysfs /firmware/devicetree/base/chosen/aee,encrypt_enable u:object_r:sysfs_aee_encrypt:s0
+genfscon sysfs /devices/virtual/mbraink_host/mbraink/mbraink_gpu u:object_r:sysfs_mbraink_gpu:s0
+genfscon sysfs /firmware/devicetree/base/chosen/aee,support_usb u:object_r:sysfs_aee_encrypt:s0
+genfscon sysfs /firmware/devicetree/base/chosen/aee,DB_PUBKEY u:object_r:sysfs_aee_encrypt:s0
+genfscon sysfs /firmware/devicetree/base/chosen/aee,load_type u:object_r:sysfs_aee_encrypt:s0
+genfscon sysfs /sys/kernel/oplus_display/panel_serial_number u:object_r:sysfs_panel_serial_number:s0
+genfscon sysfs /devices/platform/oplus_charger/power_supply u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /kernel/oplus_display/oplus_notify_fppress u:object_r:sysfs_fingerprint_notify:s0
+genfscon sysfs /sys/kernel/oplus_display/nit_brightness u:object_r:sysfs_disp_hbm:s0
+genfscon sysfs /module/firmware_class/parameters/path u:object_r:sysfs_gpu_fwpath:s0
+genfscon sysfs /firmware/devicetree/base/cpus/cpu-map u:object_r:sysfs_cpu_map:s0
+genfscon sysfs /kernel/oplus_display/notify_fppress u:object_r:sysfs_fingerprint_notify:s0
+genfscon sysfs /devices/virtual/oplus_chg/wireless u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/virtual/oplus_chg/battery u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /kernel/oplus_display/mipi_hopping u:object_r:sysfs_mipi_hopping:s0
+genfscon sysfs /devices/virtual/oplus_chg/common u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/virtual/oplus_chg/usb u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /bus/platform/drivers/msensor/ u:object_r:oplus_sensor_sys_file:s0
+genfscon sysfs /kernel/oplus_display/aod_area u:object_r:sysfs_disp_aod_area:s0
+genfscon sysfs /devices/virtual/oplus_chg/ac u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /bus/platform/drivers/als_ps/ u:object_r:oplus_sensor_sys_file:s0
+genfscon sysfs /module/oplus_bsp_zram_opt u:object_r:sysfs_oplus_zram:s0
+genfscon sysfs /kernel/oplus_display/seed u:object_r:sysfs_seed:s0
+genfscon sysfs /class/oplus_chg/wireless u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /kernel/oplus_display/hbm u:object_r:sysfs_disp_hbm:s0
+genfscon sysfs /kernel/oplus_display/osc u:object_r:sysfs_osc:s0
+genfscon sysfs /kernel/oplus_display/LCM_CABC u:object_r:sysfs_livedisplay_tuneable:s0
+genfscon sysfs /class/oplus_chg/battery u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /class/oplus_chg/common u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /class/oplus_chg/usb u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /class/power_supply u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /class/oplus_chg/ac u:object_r:sysfs_battery_supply:s0
+
+# MTK gauge, wakeup and vibrator nodes these OPPO HALs use.  Left unlabelled they
+# fall back to the generic sysfs type and every access is denied.  Stock labels.
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-gauge/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-gauge/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-gauge/power_supply/mtk-battery/wakeup26 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-gauge/power_supply/mtk-battery/wakeup27 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-gauge/power_supply/mtk-gauge/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:regulator-vibrator/leds/vibrator u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/11b21000.i2c/i2c-5/5-003b/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/11b21000.i2c/i2c-5/5-003b/power_supply/sgm41542/wakeup22 u:object_r:sysfs_wakeup:s0
+
+# Wakeup sources and the efuse the platform labels do not cover.  In each case
+# the base already grants the domain the access it needs on the specific type -
+# system_suspend reads sysfs_wakeup / system_server reads sysfs_extcon, and MTK's
+# thermal_core.te reads sysfs_thermal_efuse - so labelling the paths is the whole
+# fix and no allow rule is needed:
+#   /sys/devices/platform/.../wakeup2/event_count        was generic sysfs
+#   /sys/devices/platform/charger/power_supply/usb/wakeup30  was sysfs_batteryinfo
+#   /sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/name was generic sysfs
+#   /sys/devices/platform/soc/11c10000.efuse/mtk-devinfo0/nvmem was generic sysfs
+#     (device/mediatek/sepolicy_vndr labels the efuse nodes of other SoCs)
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-03/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup30 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/extcon_usb u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/11c10000.efuse/mtk-devinfo0/nvmem u:object_r:sysfs_thermal_efuse:s0
+
+# The remaining wakeup-source directories system_suspend enumerates through
+# /sys/class/wakeup (the platform labels some of them, and the ones under
+# /devices/virtual/wakeup, but not these): without a label they land on the
+# generic sysfs type, which system_suspend may not read.  Labelling the `wakeup`
+# directory covers the wakeupN entries inside it.
+genfscon sysfs /devices/platform/charger/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/usb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/ac/wakeup29 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/battery/wakeup31 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/mtk-master-charger/wakeup35 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11201000.usb0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11b21000.i2c/i2c-5/5-0047/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1a000000.camisp_legacy/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-rtc/rtc/rtc0/alarmtimer.0.auto/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/odm/odm:oplus,track-charge/track/wakeup u:object_r:sysfs_wakeup:s0
+
+# the two remaining ones (wakeup1 and wakeup12 resolve into these)
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-rtc/wakeup u:object_r:sysfs_wakeup:s0
+
+# The dmabuf pseudo-filesystem root (see vendor/file.te).  Without this the fs
+# stays unlabeled and any app statfs()ing a dmabuf-backed path - which the
+# camera app does while a buffer is in flight - is denied on
+# `unlabeled:filesystem { getattr }`.
+genfscon dmabuf / u:object_r:dmabuf_fs:s0

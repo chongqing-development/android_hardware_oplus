@@ -1,0 +1,36 @@
+# hal_fingerprintpay_oplus - ported from the stock vendor policy
+
+type hal_fingerprintpay_oplus, domain;
+hal_server_domain(hal_fingerprintpay_oplus, hal_fingerprintpay)
+
+type hal_fingerprintpay_oplus_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_fingerprintpay_oplus)
+
+allow hal_fingerprintpay_oplus block_device:dir { search };
+allow hal_fingerprintpay_oplus init:unix_stream_socket { connectto };
+allow hal_fingerprintpay_oplus ion_device:chr_file { getattr ioctl lock open read watch watch_reads };
+allow hal_fingerprintpay_oplus mnt_user_file:dir { search };
+allow hal_fingerprintpay_oplus mnt_user_file:lnk_file { read write };
+allow hal_fingerprintpay_oplus mnt_vendor_file:dir { add_name create getattr open read remove_name rmdir search write };
+allow hal_fingerprintpay_oplus mnt_vendor_file:file { append create getattr ioctl lock map open read setattr unlink watch watch_reads write };
+allow hal_fingerprintpay_oplus mobicore_user_device:chr_file { ioctl open read write };
+allow hal_fingerprintpay_oplus oplus_block_device:blk_file { open read write };
+allow hal_fingerprintpay_oplus proc_devinfo_file:dir { search };
+allow hal_fingerprintpay_oplus proc_opluscustom_file:dir { search };
+allow hal_fingerprintpay_oplus proc_opluscustom_file:file { append create getattr ioctl lock map open read setattr watch watch_reads write };
+allow hal_fingerprintpay_oplus property_socket:sock_file { read write };
+allow hal_fingerprintpay_oplus sdcardfs:dir { append getattr ioctl lock map open read remove_name rmdir search watch watch_reads write };
+allow hal_fingerprintpay_oplus sdcardfs:file { getattr open read unlink write };
+allow hal_fingerprintpay_oplus storage_file:dir { search };
+allow hal_fingerprintpay_oplus storage_file:lnk_file { read write };
+allow hal_fingerprintpay_oplus tee_device:chr_file { append getattr ioctl lock open read watch watch_reads write };
+allow hal_fingerprintpay_oplus uhid_device:chr_file { ioctl open read write };
+allow hal_fingerprintpay_oplus unlabeled:dir { getattr search };
+allow hal_fingerprintpay_oplus vendor_lii_file:dir { open read remove_name rmdir search write };
+allow hal_fingerprintpay_oplus vendor_lii_file:file { getattr open read unlink };
+allow hal_fingerprintpay_oplus vendor_oplus_rpmb_enable_state_prop:property_service { set };
+r_dir_file(hal_fingerprintpay_oplus, cgroup)
+r_dir_file(hal_fingerprintpay_oplus, proc_oplus_secure_common_file)
+
+add_service(hal_fingerprintpay_oplus, hal_fingerprintpay_service)
+allow hal_fingerprintpay_oplus servicemanager:binder { call transfer };

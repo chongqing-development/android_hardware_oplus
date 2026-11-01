@@ -1,0 +1,107 @@
+# Access rules for the property types declared in ../public/property.te.
+#
+# Which property to label is not in the AVC log (a file-class denial names the
+# /dev/__properties__ path, not the property) and the property is often unset, so
+# it does not even show up in the area dump.  What works: with root, read
+# /proc/<pid>/maps for the denying domain to get the libraries it really has
+# loaded, then look for property-shaped names there that none of the
+# *_property_contexts files labels - those are the probes.
+#
+# Those types are system_public_prop, which is the only shape both sides of the
+# platform neverallows accept: a coredomain may be granted a system_public_prop
+# (the vendor_internal_prop exclusion) and a vendor domain may be granted one
+# too (the `system_property_type -system_public_property_type` exclusion).
+#
+# `allow coredomain` keeps every system-side reader working.  These properties
+# used to sit in the unlabelled default_prop area, which AOSP makes readable by
+# all coredomains, so relabelling them without this rule would break the
+# framework; for the ones that sat in the vendor_default_prop area it hands the
+# framework no more than it can already be granted.
+# get_prop(), not r_file_perms: property files must not be granted ioctl or lock
+# (neverallow in system/sepolicy/private/property.te:201) and a blanket ioctl on
+# a file is neverallowed outright (private/domain.te:601).  This is the same
+# perm set AOSP generates for its own property types.
+get_prop(coredomain, oplus_project_config_prop)
+get_prop(coredomain, oplus_camera_config_prop)
+get_prop(coredomain, oplus_audio_config_prop)
+get_prop(coredomain, oplus_wfd_debug_prop)
+get_prop(coredomain, mtk_bluetooth_config_prop)
+get_prop(coredomain, mtk_smvr_config_prop)
+get_prop(coredomain, mtk_display_debug_prop)
+get_prop(coredomain, qti_va_aosp_support_prop)
+get_prop(coredomain, mtk_assert_config_prop)
+get_prop(coredomain, mtk_feature_flag_prop)
+get_prop(coredomain, device_config_generic_prop)
+# keeps the framework's access to the media properties that used to sit in the
+# default_prop area (which `allow coredomain default_prop:file` made readable)
+get_prop(coredomain, media_config_prop)
+
+# persist.sys.assert.* is settable by exactly the domains that may set the
+# system_prop family today (checked against the shipped policy); they keep that
+# right after the relabel.
+allow {
+  boot_logo_updater
+  cameraserver
+  charger
+  mediaserver
+  netd
+  surfaceflinger
+  system_app
+  system_server
+  vendor_init
+} mtk_assert_config_prop:property_service set;
+
+# Writers.  vendor_init is the ODM init scripts; bluetooth and em_app are the
+# MTK domains that own these settings on the stock ROM (MTK's own rules keep
+# pointing at its internal copies of the types, which no property uses any more
+# once the labels in property_contexts are in place); shell is how
+# persist.debug.wfd.enable is meant to be toggled from adb.
+#
+# oplus_project_config_prop is here because init.oplus.rc does
+#   setprop ro.separate.soft ${ro.boot.prjname}
+#   setprop ro.product.hw   ${ro.boot.prjname}
+# which no rule allowed before either (the properties were unlabelled); it makes
+# those two lines work in enforcing instead of only in permissive.
+set_prop(vendor_init, oplus_project_config_prop)
+set_prop(vendor_init, oplus_wfd_debug_prop)
+set_prop(shell, oplus_wfd_debug_prop)
+set_prop(vendor_init, mtk_bluetooth_config_prop)
+set_prop(bluetooth, mtk_bluetooth_config_prop)
+set_prop(vendor_init, mtk_feature_flag_prop)
+set_prop(vendor_init, mtk_smvr_config_prop)
+set_prop(vendor_init, oplus_camera_config_prop)
+
+# The persist.sys.* camera and audio switches that plat labels system_prop (see
+# private/property_contexts) move onto these two types, so the domains that may
+# write them today - exactly the system_prop writer set - must not lose that.
+# shell is added on top: it is how a switch like persist.sys.dump.aps is meant to
+# be toggled from adb, and it could not be, because no domain but these may write
+# system_prop but shell is not among them.
+allow {
+  boot_logo_updater
+  cameraserver
+  charger
+  mediaserver
+  netd
+  shell
+  surfaceflinger
+  system_app
+  system_server
+  vendor_init
+} oplus_camera_config_prop:property_service set;
+
+allow {
+  boot_logo_updater
+  cameraserver
+  charger
+  mediaserver
+  netd
+  shell
+  surfaceflinger
+  system_app
+  system_server
+  vendor_init
+} oplus_audio_config_prop:property_service set;
+
+allow vendor_init system_mtk_telecom_vibrate_prop:property_service set;
+allow hal_codec2_server custom_version_prop:file { getattr map open read };

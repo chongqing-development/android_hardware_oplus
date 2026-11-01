@@ -1,0 +1,14 @@
+# Rules for rild touching device types
+
+allow rild proc_call_state:file rw_file_perms;
+allow rild sysfs_mipi_hopping:dir { search };
+allow rild sysfs_mipi_hopping:file { open write };
+allow rild sysfs_osc:dir { search };
+allow rild sysfs_osc:file { open write };
+set_prop(rild, vendor_nw_exported_system_prop)
+set_prop(rild, vendor_oplus_radio_prop)
+
+# rild registers OPPO's own IRadioStable AIDL service (see service_contexts);
+# hal_radio_service is neverallow-protected against a foreign domain adding it,
+# which is why this device gets a type of its own.
+allow rild hal_oplus_radio_service:service_manager { add find };

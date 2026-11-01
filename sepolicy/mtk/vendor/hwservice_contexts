@@ -1,0 +1,73 @@
+# HAL hwservices
+
+vendor.nxp.nxpnfc::INxpNfc                                              u:object_r:nxpnfc_hwservice:s0
+vendor.nxp.nxpese::INxpEse                                              u:object_r:nxpese_hwservice:s0
+vendor.nxp.eventprocessor::INxpEseEvtProcessor                          u:object_r:eventprocessor_hwservice:s0
+vendor.oplus.hardware.fido.fido2ca::IFidoDaemon                         u:object_r:hal_fido2_hwservice:s0
+vendor.oplus.hardware.orms::IOrmsHalProxy                               u:object_r:hal_orms_hwservice:s0
+vendor.oplus.hardware.orms.ormsHalService::IOrmsHalService              u:object_r:halService_orms_hwservice:s0
+vendor.oplus.hardware.osense.client::IOsenseHalReporter                 u:object_r:hal_osense_client_hwservice:s0
+vendor.oplus.hardware.gameopt::IGameOptHalService                       u:object_r:hal_gameopt_hwservice:s0
+vendor.oplus.hardware.rpmh::IRpmh                                       u:object_r:hal_rpmh_hwservice:s0
+vendor.oplus.hardware.handlefactory::IHandleFactory                     u:object_r:oplus_hal_handlefactory_hwservice:s0
+vendor.oplus.hardware.binderstats::IBinderStats                         u:object_r:oplus_hal_binderstats_hwservice:s0
+vendor.oplus.hardware.midasdev::IMidasDev                               u:object_r:oplus_hal_midasdev_hwservice:s0
+vendor.oplus.hardware.cammidasservice::IMIDASService                    u:object_r:hal_midas_hwservice:s0
+vendor.display.PanelChaplin::IPanelChaplin                              u:object_r:hal_display_faca:s0
+vendor.oplus.hardware.esim::IOplusEsim                                  u:object_r:hal_esim_hwservice:s0
+vendor.oplus.hardware.virtual_device.camera.manager::IVirtualCameraManager u:object_r:hal_virtualdevice_camera_hwservice:s0
+vendor.pixelworks.hardware.display::IIris                               u:object_r:hal_display_iris_hwservice:s0
+vendor.pixelworks.hardware.feature::IIrisFeature                        u:object_r:hal_display_iris_hwservice:s0
+android.samsung.IRemosaicDaemon                                         u:object_r:oplus_remosaic_hwservice:s0
+vendor.oplus.hardware.ktv::IKtv                                         u:object_r:hal_ktv_hwservice:s0
+vendor.oplus.hardware.cwb::ICwbService                                  u:object_r:hal_cwb_hwservice:s0
+vendor.oplus.hardware.camera.slogan::ISlogan                            u:object_r:hal_slogan_hwservice:s0
+vendor.oplus.hardware.oplusSensor::ISensorFeature                       u:object_r:hal_oplusSensor_hwservice:s0
+vendor.nxpnq330.nxpese::INxpEse                                         u:object_r:nxpese_hwservice:s0
+vendor.oplus.hardware.wifi::IOplusWifiService                           u:object_r:oplus_wifi_hal_service:s0
+vendor.oplus.hardware.engcamera::IEngCamera                             u:object_r:oplus_hal_engcamera_hwservice:s0
+vendor.oplus.hardware.transmessage::ITransmessge                        u:object_r:oplus_hal_usage_hwservice:s0
+vendor.oplus.hardware.thermalmntcfg::IThermalMntCfg                     u:object_r:oplus_hal_thermalmntcfg_hwservice:s0
+vendor.oplus.hardware.cryptoeng::ICryptoeng                             u:object_r:hal_cryptoeng_hwservice:s0
+vendor.oplus.hardware.nfc::IOplusNfc                                    u:object_r:hal_oplus_nfc_hwservice:s0
+vendor.dolby.hardware.dms::IDms                                         u:object_r:hal_dms_hwservice:s0
+vendor.dolby_v351.hardware.dms::IDms                                    u:object_r:hal_dms_hwservice:s0
+vendor.dolby_v3_6.hardware.dms360::IDms                                 u:object_r:hal_dms_hwservice:s0
+vendor.dolby_sp.hardware.dmssp::IDms                                    u:object_r:hal_dms_hwservice:s0
+vendor.dolby_v3_7.hardware.dms370::IDms                                 u:object_r:hal_dms_hwservice:s0
+vendor.oplus.hardware.touch::IOplusTouch                                u:object_r:hal_oplus_touch_hwservice:s0
+vendor.oplus.hardware.misc::IOplusMisc                                  u:object_r:hal_oplus_misc_hwservice:s0
+vendor.oplus.hardware.displaypanelfeature::IDisplayPanelFeature         u:object_r:oplus_hal_displaypanel_hwservice:s0
+vendor.oplus.hardware.hdcp::IHdcp                                       u:object_r:hal_oplus_hdcp_hwservice:s0
+vendor.oplus.hardware.charger::ICharger                                 u:object_r:hal_charger_hwservice:s0
+vendor.oplus.hardware.felica::IFelicaDevice                             u:object_r:hal_felica_hwservice:s0
+vendor.oplus.hardware.mtkmodemaci::IMtkModemAci                         u:object_r:hal_mtkmodemaci_hwservice:s0
+vendor.oplus.hardware.subsys_interface.subsys_radio::ISubsysRadio       u:object_r:hal_subsys_hwservice:s0
+vendor.oplus.hardware.subsys_interface.subsys::ISubsys                  u:object_r:hal_subsys_hwservice:s0
+vendor.zeku.hardware.explorer::IMmsProvider                             u:object_r:hal_explorer_hwservice:s0
+vendor.oplus.hardware.sendextcamcmd::ISendExtCamCmdService              u:object_r:hal_sendextcamcmd_hwservice:s0
+
+# the fingerprint interfaces this device actually registers (lshal):
+#   android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint/default
+#   android.hardware.biometrics.fingerprint@2.2::IBiometricsFingerprint/default
+#   android.hardware.biometrics.fingerprint@2.3::IBiometricsFingerprint/default
+# Without them the HIDL hwservice falls back to default_android_hwservice, which
+# no domain may add or find (neverallow base_typeattr_233), so both the OPPO 2.1
+# service and the AOSP 2.3 wrapper would fail to register/resolve it.
+android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint     u:object_r:hal_fingerprint_hwservice:s0
+android.hardware.biometrics.fingerprint@2.2::IBiometricsFingerprint     u:object_r:hal_fingerprint_hwservice:s0
+android.hardware.biometrics.fingerprint@2.3::IBiometricsFingerprint     u:object_r:hal_fingerprint_hwservice:s0
+
+# the OPPO-specific interface the 2.1 service registers and the AOSP 2.3 wrapper
+# looks up (it was the one still falling back to default_android_hwservice)
+vendor.oplus.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint u:object_r:hal_fingerprint_hwservice:s0
+
+# The wrapper looks this one up as a *client*, and HIDL resolves the context of
+# that lookup by the version-less package name - the same form android.hidl.*,
+# android.hardware.* use in the platform's own hwservice_contexts.  Without this
+# line it falls back to default_android_hwservice, which no domain may find, so
+# IServiceManager::getService() returns null and the wrapper dies in its
+# constructor (see the audit line: interface=vendor.oplus.hardware.biometrics.
+# fingerprint::IBiometricsFingerprint).  The find itself is already granted by
+# the hal_fingerprint_hwservice rule in hal_fingerprint_default.te.
+vendor.oplus.hardware.biometrics.fingerprint::IBiometricsFingerprint    u:object_r:hal_fingerprint_hwservice:s0

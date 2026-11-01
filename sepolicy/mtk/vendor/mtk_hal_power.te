@@ -1,0 +1,17 @@
+# Rules for mtk_hal_power touching device types
+
+allow mtk_hal_power frs_socket:sock_file { write };
+allow mtk_hal_power hal_urcc_default:binder { call };
+allow mtk_hal_power hal_urcc_default:dir { search };
+allow mtk_hal_power hal_urcc_default:file { open read write };
+allow mtk_hal_power proc_min_free_kbytes:dir r_dir_perms;
+allow mtk_hal_power proc_min_free_kbytes:file rw_file_perms;
+set_prop(mtk_hal_power, vendor_mtk_boostfwk_checkpoint_prop)
+set_prop(mtk_hal_power, vendor_mtk_boostfwk_frame_decision_prop)
+set_prop(mtk_hal_power, vendor_mtk_boostfwk_sbb_touch_duration_prop)
+set_prop(mtk_hal_power, vendor_mtk_boostfwk_scroll_duration_h_prop)
+set_prop(mtk_hal_power, vendor_mtk_boostfwk_scroll_duration_v_prop)
+set_prop(mtk_hal_power, vendor_mtk_boostfwk_scroll_floor_prop)
+set_prop(mtk_hal_power, vendor_mtk_powerhal_prop)
+
+allow mtk_hal_power hal_urcc_service:service_manager { find };

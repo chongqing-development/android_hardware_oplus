@@ -1,0 +1,3 @@
+# Rules for atci_service touching device types
+
+r_dir_file(atci_service, sysfs_battery_supply)

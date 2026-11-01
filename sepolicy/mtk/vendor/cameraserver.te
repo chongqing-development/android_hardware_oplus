@@ -1,0 +1,14 @@
+# Rules for cameraserver touching vendor device types.
+#
+# This one keeps getting lost: it is in git HEAD, was deleted from the working
+# tree at some point, and while it is gone the camera service is denied on MTK's
+# *secure* dma-buf heaps - the ones the SVP/protected camera path allocates from
+# (mtk_svp_region-aligned, mtk_prot_region-aligned, mtk_wfd_region-aligned,
+# mtk_2d_fr_region, all on /dev/dma_heap).  The camera still takes normal photos
+# and video without it, so it only shows up when a session runs.
+#
+# cameraserver and dmabuf_system_secure_heap_device are both plat-public, so the
+# rule is fine here; there is no neverallow on the type (surfaceflinger,
+# mediaserver, hal_graphics_allocator, mediaswcodec, system_server and every app
+# already have it).
+allow cameraserver dmabuf_system_secure_heap_device:chr_file r_file_perms;

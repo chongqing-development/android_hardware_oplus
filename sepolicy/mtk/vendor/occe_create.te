@@ -1,0 +1,38 @@
+# occe_create - ported from the stock vendor policy
+
+type occe_create, domain;
+hal_client_domain(occe_create, hal_configstore)
+typeattribute occe_create mlstrustedsubject;
+
+type occe_create_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(occe_create)
+
+allow occe_create gpu_device:chr_file { getattr ioctl map open read write };
+allow occe_create hal_configstore_ISurfaceFlingerConfigs:hwservice_manager { find };
+allow occe_create hal_graphics_mapper_hwservice:hwservice_manager { find };
+allow occe_create hwservicemanager:binder { call };
+allow occe_create proc_ged:file { ioctl open read };
+allow occe_create self:capability { sys_admin };
+allow occe_create tmpfs:dir { add_name append create getattr ioctl lock map open read remove_name rename rmdir search setattr unlink watch watch_reads write };
+allow occe_create tmpfs:file create_file_perms;
+get_prop(occe_create, hwservicemanager_prop)
+
+# Once the domain transition actually happens these two are what is left of the
+# accesses init was granted by accident: the loader maps the MEOW/pq libraries
+# (same_process_hal_file) and libcreatebin.so (vendor_file).
+allow occe_create same_process_hal_file:file execute;
+allow occe_create vendor_file:file execute;
+
+get_prop(occe_create, oplus_project_config_prop)
+
+# the OPPO camera tuning properties occe_create looks up as well, and AOSP's
+# writable graphics config
+get_prop(occe_create, oplus_camera_config_prop)
+get_prop(occe_create, graphics_config_writable_prop)
+
+get_prop(occe_create, media_config_prop)
+
+# /proc/ged ioctls: MTK's policy puts the command list in an extended-permission
+# rule (an empty xperm table means the blanket ioctl grant no longer applies), so
+# the same command set the other GED users have is granted here.
+allowxperm occe_create proc_ged:file ioctl { 0x6700-0x6710 0x6764-0x676b 0x67c8 };

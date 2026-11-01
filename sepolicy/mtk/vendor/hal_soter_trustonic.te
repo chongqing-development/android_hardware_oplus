@@ -1,0 +1,12 @@
+# hal_soter_trustonic - ported from the stock vendor policy
+
+type hal_soter_trustonic, domain;
+hal_server_domain(hal_soter_trustonic, hal_soter)
+
+type hal_soter_trustonic_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_soter_trustonic)
+
+allow hal_soter_trustonic mobicore_user_device:chr_file { ioctl map open read write };
+
+add_service(hal_soter_trustonic, hal_soter_service)
+allow hal_soter_trustonic servicemanager:binder { call transfer };

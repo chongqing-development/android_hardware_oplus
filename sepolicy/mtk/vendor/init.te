@@ -1,0 +1,25 @@
+# init-domain rules for this device.  The tools the ODM init scripts run with
+# `exec -`, and the overlay scripts themselves, keep init's domain, so their
+# accesses have to be written here.  Each rule below is scoped to one OPPO/MTK
+# node; none of them is a blanket grant.
+
+# /proc/oplusVersion/prjName: the ODM scripts read the project name back
+# (hal_audio_default, mtk_hal_pq, mtk_hal_camera and hal_charger_oplus read the
+# same node, each in its own file).
+r_dir_file(init, oplus_project_proc)
+
+# init.oplus.overlay.rc bind-mounts the project specific camera and charging
+# configs over the /odm copies, and the mount target is what needs the
+# permission:
+#   mount none .../prj_<prjname>/odm/etc/camera/CameraHWConfiguration.config ...
+#   mount none .../prj_<prjname>/odm/firmware/fastchg/charging_thermal_config_default.txt ...
+allow init vendor_configs_file:file mounton;
+allow init vendor_file:file mounton;
+
+# /dev/socket/hidl2touchdaemon_client and /dev/socket/vendor.bip_ap are created
+# by vendor init scripts and end up on the generic socket_device label, because
+# nothing labels those paths.  Nothing in the log connects to them either, so
+# leaving them unlabelled keeps their clients working with the rules they have;
+# give them their own types (and connect rules for the clients) if they ever
+# need to be confined.
+allow init socket_device:sock_file { create setattr };

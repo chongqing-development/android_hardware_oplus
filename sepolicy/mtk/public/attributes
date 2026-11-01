@@ -1,0 +1,2 @@
+# Attributes shared by the system_ext IFAA client and the vendor HAL.
+hal_attribute(fingerprintpay)

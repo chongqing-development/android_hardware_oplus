@@ -1,0 +1,24 @@
+# Rules for hal_audio_default touching device types
+
+set_prop(hal_audio_default, vendor_oplus_prop)
+
+# Second speaker audio_param path (ro.oplus.image.my_company.speaker)
+get_prop(hal_audio_default, audio_sed_spk_param)
+
+# audio tuning tool path, stock had mtk_hal_audio (this tree runs that HAL as
+# hal_audio_default) both set and read audio_tunning_prop
+set_prop(hal_audio_default, audio_tunning_prop)
+
+# The MTK audio HAL asks the OPPO performance HAL for boosts, reads the battery
+# gauge for speaker protection and the OPPO project name (stock granted the
+# equivalent set to mtk_hal_audio).
+binder_call(hal_audio_default, hal_oplus_performance_aidl)
+allow hal_audio_default hal_oplus_performance_aidl_service:service_manager { find };
+r_dir_file(hal_audio_default, oplus_project_proc)
+r_dir_file(hal_audio_default, sysfs_battery_supply)
+r_dir_file(hal_audio_default, sysfs_batteryinfo)
+
+get_prop(hal_audio_default, oplus_audio_config_prop)
+
+get_prop(hal_audio_default, qti_va_aosp_support_prop)
+get_prop(hal_audio_default, device_config_generic_prop)

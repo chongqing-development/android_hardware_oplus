@@ -1,0 +1,17 @@
+# gps_dump - ported from the stock vendor policy
+
+type gps_dump, domain;
+
+type gps_dump_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(gps_dump)
+
+allow gps_dump conninfra_device:chr_file rw_file_perms;
+allow gps_dump connsyslog_data_vendor_file:dir create_dir_perms;
+allow gps_dump connsyslog_data_vendor_file:file create_file_perms;
+allow gps_dump mnt_user_file:dir { search };
+allow gps_dump mnt_user_file:lnk_file r_file_perms;
+allow gps_dump storage_file:lnk_file r_file_perms;
+allow gps_dump stp_dump_data_file:dir create_dir_perms;
+allow gps_dump stp_dump_data_file:file create_file_perms;
+allow gps_dump tmpfs:lnk_file r_file_perms;
+get_prop(gps_dump, vendor_mtk_coredump_prop)

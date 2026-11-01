@@ -1,0 +1,3 @@
+# Rules for bt_dump touching device types
+
+set_prop(bt_dump, vendor_oplus_prop)

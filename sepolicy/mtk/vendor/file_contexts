@@ -1,0 +1,115 @@
+# Device nodes and files specific to this device
+
+/dev/acm                                                          u:object_r:acm_device:s0
+/dev/aol_flp                                                      u:object_r:aol_flp_device:s0
+/dev/awinic_haptic                                                u:object_r:aac_richtap_dev_device:s0
+/dev/binder_stats                                                 u:object_r:oplus_binder_stats_device:s0
+/dev/block/bootdevice/by-name/oplusreserve*                       u:object_r:oplus_block_device:s0
+/dev/block/by-name/cdt_engineering(_[ab])?                        u:object_r:oplus_block_device:s0
+/dev/block/by-name/oplusreserve.*                                 u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/oplus_custom               u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/oplusreserve.*             u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/reserve.*                  u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/oplus_custom      u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/oplusreserve.*    u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/reserve.*         u:object_r:oplus_block_device:s0
+/dev/block/sdc3                                                   u:object_r:oplus_block_device:s0
+/dev/block/sdc4                                                   u:object_r:oplus_block_device:s0
+/dev/block/soc/11270000.ufshci/by-name/oplusreserve*              u:object_r:oplus_block_device:s0
+/dev/chg_test_kit                                                 u:object_r:oplus_chg_test_kit_device:s0
+/dev/coredump_wifi(/.*)?                                          u:object_r:coredump_wifi_device:s0
+/dev/dbmdx(.*)                                                    u:object_r:dbmdx_ch_device:s0
+/dev/esfp0                                                        u:object_r:egis_finger_device:s0
+/dev/esim-det                                                     u:object_r:esim_det_device:s0
+/dev/esim-en                                                      u:object_r:esim_en_device:s0
+/dev/esim-gpio                                                    u:object_r:esim_gpio_device:s0
+/dev/explorer_preisp                                              u:object_r:explorer_device:s0
+/dev/fingerprint_dev                                              u:object_r:fingerprintd_device:s0
+/dev/fpsensor                                                     u:object_r:chipone_finger_device:s0
+/dev/fw_log_gpsmcu                                                u:object_r:fw_log_gpsmcu_device:s0
+/dev/gpsmdl.*(/.*)?                                               u:object_r:gpsmdl_device:s0
+/dev/gpsstrg.*(/.*)?                                              u:object_r:gpsstrg_device:s0
+/dev/jiiov_fp                                                     u:object_r:jiiov_fp_device:s0
+/dev/ktvdevw                                                      u:object_r:oplus_ktv_device:s0
+/dev/m_virtual_sensor_misc(/.*)?                                  u:object_r:m_virtual_sensor_misc:s0
+/dev/mbraink(/.*)?                                                u:object_r:mtk_mbraink_device:s0
+/dev/midas_dev                                                    u:object_r:oplus_midas_device:s0
+/dev/mtk_usb_offload(/.*)?                                        u:object_r:mtk_usb_offload_device:s0
+/dev/oplus_chg                                                    u:object_r:oplus_charger_dev:s0
+/dev/oplus_consumer_ir                                            u:object_r:oplus_consumerir_device:s0
+/dev/oplus_display                                                u:object_r:oplus_display_device:s0
+/dev/osvelte                                                      u:object_r:osvelte_device:s0
+/dev/sg3                                                          u:object_r:nand_healthinfo_device:s0
+/dev/sia81xx_tuning_if                                            u:object_r:sia81xx_tuning_if_device:s0
+/dev/silead_fp                                                    u:object_r:silead_fpd_device:s0
+/dev/socket/atsdaemond2(/.*)?                                     u:object_r:atsdaemond2_socket:s0
+/dev/socket/frs_socket(/.*)?                                      u:object_r:frs_socket:s0
+/dev/spidev0.0                                                    u:object_r:silead_fpd_device:s0
+/dev/spidev1.0                                                    u:object_r:silead_fpd_device:s0
+/dev/ssc_interactive                                              u:object_r:ssc_interactive_device:s0
+/dev/tcm1                                                         u:object_r:tp_device:s0
+/dev/tcm_hbp0                                                     u:object_r:tp_device:s0
+/dev/tp_misc(/.*)?                                                u:object_r:tp_device:s0
+/dev/tp_misc1                                                     u:object_r:tp_device:s0
+/dev/ttyCMIPC8                                                    u:object_r:subsystem_ttycmipc_device:s0
+/dev/wls_dev                                                      u:object_r:oplus_wls_device:s0
+
+/data/misc/cameraserver                         u:object_r:oplus_algo_data_file:s0
+/data/system/audio(/.*)?                        u:object_r:oplus_mm_data_file:s0
+/data/vendor/FactoryTestReport(/.*)?            u:object_r:factorytestreport_vendor_data_file:s0
+/data/vendor/battery(/.*)?                      u:object_r:oplus_battery_log_file:s0
+/data/vendor/display(/.*)?                      u:object_r:vendor_display_vendor_data_file:s0
+/data/vendor/dolby(/.*)?                        u:object_r:dolby_mm_data_file:s0
+/data/vendor/fingerprint(/.*)?                  u:object_r:oplus_fingerprint_file:s0
+/data/vendor/fingerprint_ori(/.*)?              u:object_r:oplus_fingerprint_file:s0
+/data/vendor/firmware(/.*)?                     u:object_r:vendor_bt_data_file:s0
+/data/vendor/imgsys_dump(/.*)?                  u:object_r:vendor_imgsys_dump_file:s0
+/data/vendor/mbrain(/.*)?                       u:object_r:data_vendor_mbrain:s0
+/data/vendor/mdlog(/.*)?                        u:object_r:mdlog_data_vendor_file:s0
+/data/vendor/optical_fingerprint(/.*)?          u:object_r:oplus_fingerprint_file:s0
+/data/vendor/secure_element(/.*)?               u:object_r:secure_element_vendor_data_file:s0
+/data/vendor/silead(/.*)?                       u:object_r:oplus_fingerprint_file:s0
+/data/vendor/swap(/.*)?                         u:object_r:vendor_zwb_vendor_data_file:s0
+/data/vendor/touch(/.*)?                        u:object_r:oplus_touch_data_file:s0
+/data/vendor/videodump(/.*)?                    u:object_r:oplus_vcodecdump_file:s0
+/data/vendor_de/[0-9]+/cryptoeng(/.*)?          u:object_r:cryptoeng_data_file:s0
+/data/vendor_de/[0-9]+/faceunlock(/.*)?         u:object_r:face_picture_file:s0
+/data/vendor_de/rpmb_status(/.*)?               u:object_r:vendor_lii_file:s0
+/mnt/vendor/persist/camera(/.*)?                u:object_r:persist_camera_file:s0
+/mnt/vendor/persist/engineermode(/.*)?          u:object_r:persist_engineer_file:s0
+/mnt/vendor/persist/explorer(/.*)?              u:object_r:explorer_vendor_file:s0
+/mnt/vendor/persist/fingerprint(/.*)?           u:object_r:oplus_fingerprint_file:s0
+/mnt/vendor/persist/fingerprint/jiiov(/.*)?     u:object_r:factorytestreport_vendor_data_file:s0
+/mnt/vendor/persist/fingerprint/silead(/.*)?    u:object_r:oplus_fingerprint_file:s0
+
+# OPPO HAL daemons shipped under /odm/bin/hw and /vendor/bin/hw.  Their .rc files
+# carry no seclabel, so the init_daemon_domain() transition can only fire when the
+# binary itself has the matching *_exec type.  Without these labels the daemons
+# run in the init domain.  Labels are taken from the stock vendor_file_contexts of
+# the RMX3780 dump; only the binaries this device actually ships are listed.
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.urcc-service         u:object_r:hal_urcc_default_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.charger-V[0-9]+-service u:object_r:hal_charger_oplus_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.ormsHalService-aidl-service u:object_r:oplus_orms_aidl_service_exec:s0
+/(vendor|odm)/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service  u:object_r:hal_oplusSensor_aidl_default_exec:s0
+/(vendor|odm)/bin/hw/vendor-oplus-hardware-performance-V1-service  u:object_r:hal_oplus_performance_aidl_exec:s0
+/(vendor|odm)/bin/hw/vendor-oplus-hardware-touch-V2-service        u:object_r:hal_oplus_touch_aidl_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch-service\.oplus u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay-service\.oplus-mtk u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.displaypanelfeature@1\.0-service u:object_r:oplus_hal_displaypanelfeature_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.cammidasservice-V1-service u:object_r:hal_oplus_cammidasservice_aidl_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.felica@1\.0-service  u:object_r:hal_felica_oplus_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.nfc_aidl-service     u:object_r:hal_oplus_nfc_default_exec:s0
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.nfcExtns-service     u:object_r:hal_nfcextns_default_exec:s0
+/(vendor|odm)/bin/hw/android\.hardware\.power\.stats-impl\.oplus     u:object_r:hal_power_stats_default_exec:s0
+/(vendor|odm|system/vendor)/bin/hw/vendor\.oplus\.hardware\.fido\.fidoca@1\.0-service u:object_r:hal_fido_oplus_exec:s0
+/(vendor|odm|system/vendor)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service_uff u:object_r:hal_fingerprint_oplus_exec:s0
+/(vendor|odm|system/vendor)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprintpay@1\.0-service u:object_r:hal_fingerprintpay_oplus_exec:s0
+/(vendor|odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oplus u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.trustonic\.soter@1\.0-service u:object_r:hal_soter_trustonic_exec:s0
+/(vendor|odm)/bin/hw/wlschgd                                       u:object_r:wlchg_exec:s0
+
+# occe_create is a vendor init service
+# (device/realme/chongqing/rootdir/etc/init.oplus.rc), but /odm/bin/occe_create
+# carries no label, so it stayed on vendor_file and the occe_create domain this
+# policy defines was never entered - init ran the binary in its own domain.
+/odm/bin/occe_create                                              u:object_r:occe_create_exec:s0

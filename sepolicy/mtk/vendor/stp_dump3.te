@@ -1,0 +1,3 @@
+# Rules for stp_dump3 touching device types
+
+set_prop(stp_dump3, vendor_oplus_prop)
