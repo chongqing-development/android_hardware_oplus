@@ -1,0 +1,9 @@
+service vendor.touch-aidl-1 /odm/bin/hw/vendor-oplus-hardware-touch-V2-service
+    class hal
+    user root
+    group system
+    interface aidl vendor.oplus.hardware.touch.IOplusTouch/default
+
+on boot
+    chown system system /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/game_switch_enable

@@ -1,0 +1,23 @@
+//
+// SPDX-FileCopyrightText: 2026 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor-oplus-hardware-touch-V2-service",
+    srcs: [
+        "OplusTouch.cpp",
+        "service.cpp",
+    ],
+    device_specific: true,
+    relative_install_path: "hw",
+    init_rc: ["vendor-oplus-hardware-touch-V2-service.rc"],
+    vintf_fragments: ["manifest_touch_aidl.xml"],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "vendor.oplus.hardware.touch-V2-ndk",
+    ],
+    cpp_std: "gnu++17",
+}
