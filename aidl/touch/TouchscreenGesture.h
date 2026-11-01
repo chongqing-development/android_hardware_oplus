@@ -25,6 +25,8 @@ class TouchscreenGesture : public BnTouchscreenGesture {
 
   private:
     std::shared_ptr<IOplusTouch> mOplusTouch;
+    bool mHasIndepGestureControl = false;
+    bool mHasSimpleDoubleTap = false;
 
     // See: drivers/input/touchscreen/oplus_touchscreen_v2/touchpanel_common.h
     static constexpr int kGestureStartKey = 246;

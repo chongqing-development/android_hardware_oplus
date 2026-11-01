@@ -27,15 +27,38 @@ namespace lineage {
 namespace touch {
 
 TouchscreenGesture::TouchscreenGesture(std::shared_ptr<IOplusTouch> oplusTouch)
-    : mOplusTouch(std::move(oplusTouch)) {}
+    : mOplusTouch(std::move(oplusTouch)) {
+    if (mOplusTouch) {
+        int32_t indepSupported = 0;
+        if (mOplusTouch->isTouchNodeSupport(OplusTouchConstants::DEFAULT_TP_IC_ID,
+                                            OplusTouchConstants::DOUBLE_TAP_INDEP_NODE,
+                                            &indepSupported)
+                    .isOk()) {
+            mHasIndepGestureControl = indepSupported > 0;
+        }
+
+        int32_t simpleSupported = 0;
+        if (mOplusTouch->isTouchNodeSupport(OplusTouchConstants::DEFAULT_TP_IC_ID,
+                                            OplusTouchConstants::DOUBLE_TAP_ENABLE_NODE,
+                                            &simpleSupported)
+                    .isOk()) {
+            mHasSimpleDoubleTap = simpleSupported > 0;
+        }
+    }
+}
 
 ndk::ScopedAStatus TouchscreenGesture::getSupportedGestures(std::vector<Gesture>* _aidl_return) {
     std::vector<Gesture> gestures;
 
-    for (const auto& [id, name] : kGestureNames) {
-        if (kSupportedGestures & (1 << id)) {
-            gestures.push_back({static_cast<int>(gestures.size()), name, kGestureStartKey + id});
+    if (!mOplusTouch || mHasIndepGestureControl) {
+        for (const auto& [id, name] : kGestureNames) {
+            if (kSupportedGestures & (1 << id)) {
+                gestures.push_back({static_cast<int>(gestures.size()), name, kGestureStartKey + id});
+            }
         }
+    } else if (mHasSimpleDoubleTap) {
+        gestures.push_back({0, kGestureNames.at(kGestureDoubleTap),
+                            kGestureStartKey + kGestureDoubleTap});
     }
 
     *_aidl_return = gestures;
@@ -43,6 +66,20 @@ ndk::ScopedAStatus TouchscreenGesture::getSupportedGestures(std::vector<Gesture>
 }
 
 ndk::ScopedAStatus TouchscreenGesture::setGestureEnabled(const Gesture& gesture, bool enabled) {
+    const int gestureId = gesture.keycode - kGestureStartKey;
+
+    // Some panels only expose the master double-tap node and cannot control
+    // individual gestures through double_tap_enable_indep.
+    if (mOplusTouch && !mHasIndepGestureControl) {
+        if (mHasSimpleDoubleTap && gestureId == kGestureDoubleTap) {
+            mOplusTouch->touchWriteNodeFileOneWay(OplusTouchConstants::DEFAULT_TP_IC_ID,
+                                                  OplusTouchConstants::DOUBLE_TAP_ENABLE_NODE,
+                                                  enabled ? "1" : "0");
+            return ndk::ScopedAStatus::ok();
+        }
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
     int contents = 0;
 
     if (std::string tmp; mOplusTouch) {
@@ -56,9 +93,9 @@ ndk::ScopedAStatus TouchscreenGesture::setGestureEnabled(const Gesture& gesture,
     }
 
     if (enabled) {
-        contents |= (1 << (gesture.keycode - kGestureStartKey));
+        contents |= (1 << gestureId);
     } else {
-        contents &= ~(1 << (gesture.keycode - kGestureStartKey));
+        contents &= ~(1 << gestureId);
     }
 
     if (mOplusTouch) {
